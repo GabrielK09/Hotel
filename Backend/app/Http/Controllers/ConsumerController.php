@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ConsumerRequest;
-use App\Models\Consumer;
 use App\Services\ConsumerService;
-use Illuminate\Http\Request;
 
 class Consumers extends Controller
 {
@@ -22,17 +20,19 @@ class Consumers extends Controller
 
     public function store(ConsumerRequest $request){
         $data = $request->validated();
+        return $this->consumerService->store($data);
     }
 
-    public function show(ConsumerRequest $request){
-        $data = $request->validated();
+    public function show(int $id){
+        return $this->consumerService->findByID($id);
     }
 
-    public function update(ConsumerRequest $request){
+    public function update(ConsumerRequest $request, int $id){
         $data = $request->validated();
+        return $this->consumerService->update($data, $id);
     }
 
-    public function delete(ConsumerRequest $request){
-        $data = $request->validated();
+    public function delete(int $id){
+        return $this->consumerService->delete($id);
     }
 }

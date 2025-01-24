@@ -5,14 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CashRegisterRequest;
 use App\Services\CashRegisterService;
-use Illuminate\Http\Request;
 
 class CashRegister extends Controller
 {
     protected $cashRegisterService;
 
-    public function __construct(CashRegisterService $cashRegisterService)
-    {
+    public function __construct(CashRegisterService $cashRegisterService){
         $this->cashRegisterService = $cashRegisterService;
     }
 
@@ -22,6 +20,7 @@ class CashRegister extends Controller
 
     public function store(CashRegisterRequest $request){
         $data = $request->validated();
+        return $this->cashRegisterService->store($data);
     }
 
     public function show(int $id){

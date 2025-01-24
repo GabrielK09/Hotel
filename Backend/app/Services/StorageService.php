@@ -2,20 +2,20 @@
 
 namespace App\Services;
 
-use App\Repositories\Eloquent\CashRegisterRepository;
+use App\Repositories\Eloquent\StorageRepository;
 
-class CashRegisterService 
-{
-    protected $cashRegisterRepository;
+class StorageService{
+    
+    protected $storageRepository;
 
-    public function __construct(CashRegisterRepository $cashRegisterRepository)
+    public function __construct(StorageRepository $storageRepository)
     {
-        $this->cashRegisterRepository = $cashRegisterRepository;
+        $this->storageRepository = $storageRepository;
     }
-
+    
     public function getAll(){
         try {
-            return $this->cashRegisterRepository->getAll(1);
+            return $this->storageRepository->getAll(1);
         } catch (\Throwable $th) {
             return $this->returnResponse($th);
         }
@@ -25,9 +25,9 @@ class CashRegisterService
         try {
             return response()->json([
                 'success' => true,
-                'cash' => $this->cashRegisterRepository->findByID($id)
+                'product' => $this->storageRepository->findByID($id)
             ]);
-            
+
         } catch (\Throwable $th) {
             return $this->returnResponse($th);
         }
@@ -35,7 +35,7 @@ class CashRegisterService
 
     public function store(array $data){
         try {
-            $this->cashRegisterRepository->store($data);
+            $this->storageRepository->store($data);
             return response()->json(true);
 
         } catch (\Throwable $th) {
@@ -45,7 +45,7 @@ class CashRegisterService
 
     public function update(array $data, int $id){
         try {
-            $this->cashRegisterRepository->update($data, $id);
+            $this->storageRepository->update($data, $id);
             return response()->json(true);
 
         } catch (\Throwable $th) {
@@ -55,9 +55,9 @@ class CashRegisterService
 
     public function delete(int $id){
         try {
-            $this->cashRegisterRepository->delete($id);
+            $this->storageRepository->delete($id);
             return response()->json(true);
-
+            
         } catch (\Throwable $th) {
             return $this->returnResponse($th);
         }

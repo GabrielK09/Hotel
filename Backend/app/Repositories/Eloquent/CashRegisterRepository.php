@@ -3,7 +3,6 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\CashRegister;
-use Illuminate\Support\Facades\Hash;
 
 class CashRegisterRepository
 {
@@ -17,6 +16,10 @@ class CashRegisterRepository
 
     public function store(array $data){
         return CashRegister::create($data);
+    }
+
+    public function show(int $id){
+        return CashRegister::where('id', $id)->first();
     }
 
     public function update(array $data, int $id){
