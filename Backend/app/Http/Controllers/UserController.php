@@ -4,23 +4,35 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
-use Illuminate\Http\Request;
+use App\Services\UserService;
 
 class User extends Controller
 {
+    protected $userService;
+
+    public function __construct(UserService $userService){
+        $this->userService = $userService;
+    }
+
+    public function getAll(){
+        return $this->userService->getAll();
+    }
+
     public function store(UserRequest $request){
         $data = $request->validated();
+        return $this->userService->store($data);
     }
 
-    public function show(UserRequest $request){
-        $data = $request->validated();
+    public function show(int $id){
+        return $this->userService->findByID($id);
     }
 
-    public function update(UserRequest $request){
+    public function update(UserRequest $request, int $id){
         $data = $request->validated();
+        return $this->userService->update($data, $id);
     }
 
-    public function delete(UserRequest $request){
-        $data = $request->validated();
+    public function delete(int $id){
+        return $this->userService->delete($id);
     }
 }
