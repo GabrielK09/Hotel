@@ -13,6 +13,9 @@ class Customer extends Model
         'cnpj',
         'cpf',
         'address',
+        'number',
+        'account',
+        'password',
         'active',
     ];
 }
