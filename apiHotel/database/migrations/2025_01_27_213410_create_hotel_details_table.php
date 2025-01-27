@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('customers', function (Blueprint $table) {
+        Schema::create('hotel_details', function (Blueprint $table) {
             $table->id();
             $table->string('name', 120);
-            $table->string('cnpj', 14)->nullable();
-            $table->string('cpf', 11)->nullable();
+            $table->string('cnpj', 14);
+            $table->string('email', 170);
             $table->string('address', 120);
-            $table->string('account', 120);
-            $table->string('password', 120);
             $table->integer('number', false, 20);
-            $table->boolean('active', 1)->default(1);
+            $table->integer('number_of_rooms', false, 20);
+            $table->integer('number_of_employees', false, 20);
+            
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('customers');
+        Schema::dropIfExists('hotel_details');
     }
 };

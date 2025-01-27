@@ -24,7 +24,12 @@ class CustomerService
             ], 200);
 
         } catch (\Throwable $th) {
-            //throw $th;
+            return response()->json([
+                'success' => false,
+                'message' => $th->getMessage(),
+                'line' => $th->getLine()
+
+            ]);
         }
     }
 
@@ -40,7 +45,72 @@ class CustomerService
             ], 201);
 
         } catch (\Throwable $th) {
-            //throw $th;
+            return response()->json([
+                'success' => false,
+                'message' => $th->getMessage(),
+                'line' => $th->getLine()
+
+            ]);
+        }
+    }
+
+    public function update(array $data, int $id)
+    {
+        try {
+            $this->customerRepository->update($data, $id);
+            
+            return response()->json([
+               'success' => true
+
+            ], 201);
+
+        } catch (\Throwable $th) {
+            return response()->json([
+                'success' => false,
+                'message' => $th->getMessage(),
+                'line' => $th->getLine()
+
+            ]);
+        }
+    }
+
+    public function findCustomer(int $id)
+    {
+        try {
+            
+            return response()->json([
+                'success' => true,
+                'customer' => $this->customerRepository->findCustomer($id)
+
+            ], 201);
+
+        } catch (\Throwable $th) {
+            return response()->json([
+                'success' => false,
+                'message' => $th->getMessage(),
+                'line' => $th->getLine()
+
+            ]);
+        }
+    }
+
+    public function delete(int $id)
+    {
+        try {
+            $this->customerRepository->delete($id);
+            return response()->json([
+                'success' => true,
+                'customer' => $this->customerRepository->findCustomer($id)
+
+            ], 201);
+
+        } catch (\Throwable $th) {
+            return response()->json([
+                'success' => false,
+                'message' => $th->getMessage(),
+                'line' => $th->getLine()
+
+            ]);
         }
     }
 }

@@ -19,4 +19,24 @@ class CustomerRepository implements CustomerContract
         
     }
 
+    public function update(array $data, int $id)
+    {
+        return Customer::where('id', $id)->update($data);
+
+    }
+    
+    public function findCustomer(int $id)
+    {
+        return Customer::where('id', $id)->first();
+        
+    }
+
+    public function delete(int $id)
+    {
+        return Customer::where('id', $id)->update([
+            'active' => 0
+            
+        ]);
+        
+    }
 }

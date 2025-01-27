@@ -25,4 +25,23 @@ class CustomerController extends Controller
         return $this->customerService->create($data);
         
     }
+
+    public function update(CustomerRequest $request, int $id)
+    {
+        $data = $request->validated();
+        return $this->customerService->update($data, $id);
+        
+    }
+
+    public function findCustomer(int $id)
+    {
+        return $this->customerService->findCustomer($id);
+        
+    }
+
+    public function delete(int $id)
+    {
+        return $this->customerService->delete($id);
+        
+    }
 }
