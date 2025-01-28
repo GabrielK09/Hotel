@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('capacity', 50);
             $table->string('level', 20);
             $table->float('price_for_night', 10, 2);
-            $table->integer('number_room', false, 10);
+            $table->string('number_room', 30);
             $table->boolean('busy', 1)->default(0);
 
             $table->timestamps();            

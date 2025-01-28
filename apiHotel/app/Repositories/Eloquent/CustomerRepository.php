@@ -25,9 +25,11 @@ class CustomerRepository implements CustomerContract
 
     }
     
-    public function findCustomer(int $id)
+    public function find(string $param)
     {
-        return Customer::where('id', $id)->first();
+        return Customer::where('id', $param)
+                        ->orWhere('name', 'like', '%' . $param . '%')
+                        ->first();
         
     }
 

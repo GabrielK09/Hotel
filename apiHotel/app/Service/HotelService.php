@@ -2,15 +2,14 @@
 
 namespace App\Service;
 
-use App\Repositories\Eloquent\CustomerRepository;
+use App\Repositories\Eloquent\HotelRepository;
 
-class CustomerService
+class HotelService
 {
-    protected $customerRepository;
-
-    public function __construct(CustomerRepository $customerRepository)
+    protected $hotelRepository;
+    public function __construct(HotelRepository $hotelRepository)
     {
-        $this->customerRepository = $customerRepository;
+        $this->hotelRepository = $hotelRepository;
 
     }
 
@@ -19,7 +18,7 @@ class CustomerService
         try {
             return response()->json([
                 'success' => true,
-                'all' => $this->customerRepository->all($active)
+                'all' => $this->hotelRepository->all($active)
 
             ], 200);
 
@@ -33,11 +32,10 @@ class CustomerService
         }
     }
 
-
     public function create(array $data)
     {
         try {
-            $this->customerRepository->create($data);
+            $this->hotelRepository->create($data);
             
             return response()->json([
                'success' => true
@@ -57,7 +55,7 @@ class CustomerService
     public function update(array $data, int $id)
     {
         try {
-            $this->customerRepository->update($data, $id);
+            $this->hotelRepository->update($data, $id);
             
             return response()->json([
                'success' => true
@@ -74,13 +72,13 @@ class CustomerService
         }
     }
 
-    public function findCustomer(string  $id)
+    public function findHotel(string  $id)
     {
         try {
             
             return response()->json([
                 'success' => true,
-                'customer' => $this->customerRepository->find($id)
+                'customer' => $this->hotelRepository->find($id)
 
             ], 201);
 
@@ -97,10 +95,10 @@ class CustomerService
     public function delete(int $id)
     {
         try {
-            $this->customerRepository->delete($id);
+            $this->hotelRepository->delete($id);
             return response()->json([
                 'success' => true,
-                'customer' => $this->customerRepository->find($id)
+                'customer' => $this->hotelRepository->find($id)
 
             ], 201);
 

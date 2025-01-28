@@ -1,0 +1,14 @@
+{
+    "name": "Hotel teste",
+    "cnpj": "12314567833",
+    "email": "12312@teste.com",
+    "address": "Rua hotel",
+    "number": 124,
+    "number_of_rooms": 200
+    
+
+}
+
+
+
+// "param": "teste"

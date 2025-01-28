@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('hotel_details', function (Blueprint $table) {
             $table->id();
             $table->string('name', 120);
-            $table->string('cnpj', 14);
-            $table->string('email', 170);
+            $table->string('cnpj', 14)->unique();
+            $table->string('email', 170)->unique();
             $table->string('address', 120);
             $table->integer('number', false, 20);
             $table->integer('number_of_rooms', false, 20);
