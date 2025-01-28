@@ -37,6 +37,7 @@ class HotelController extends Controller
     public function find(Request $request)
     {
         return $this->hotelService->findHotel($request->input('param'));
+        
     }
 
     public function delete(int $id)
