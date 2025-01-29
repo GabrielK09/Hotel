@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('cnpj', 14)->nullable();
             $table->string('cpf', 11)->nullable();
             $table->string('address', 120);
-            $table->string('account', 120);
-            $table->string('password', 120);
             $table->integer('number', false, 20);
+            $table->string('account', 120);
+            $table->string('password', 120);    
             $table->boolean('active', 1)->default(1);
             $table->timestamps();
         });

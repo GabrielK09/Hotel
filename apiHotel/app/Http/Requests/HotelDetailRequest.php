@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
 class HotelDetailRequest extends FormRequest
@@ -65,7 +65,7 @@ class HotelDetailRequest extends FormRequest
     {
         throw new HttpResponseException(
             response()->json([
-                'message' => 'Erro de validação',
+                'message' => 'Erro de validação ( Hotel Detail )',
                 'errors' => $validator->errors(),
 
             ], 422)
