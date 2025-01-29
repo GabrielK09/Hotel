@@ -22,7 +22,7 @@ class HotelDetailRequest extends FormRequest
     {
         
         $required = $this->isMethod('POST') ? 'required' : 'sometimes';
-
+    
         return [
             'name' => [$required, 'string', 'max:120'],
             'cnpj' => [$required, 'string', 'max:14'],
@@ -61,7 +61,7 @@ class HotelDetailRequest extends FormRequest
         ];
     }
 
-    public function failedValidation(Validator $validator)
+    /*public function failedValidation(Validator $validator)
     {
         throw new HttpResponseException(
             response()->json([
@@ -70,6 +70,7 @@ class HotelDetailRequest extends FormRequest
 
             ], 422)
         );
-    }
+    }*/
+
 }
  
