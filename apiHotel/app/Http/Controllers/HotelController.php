@@ -22,6 +22,7 @@ class HotelController extends Controller
 
     public function create(HotelDetailRequest $request)
     {
+        return $request->all();
         $data = $request->validated();
         return $this->hotelService->create($data);
 
