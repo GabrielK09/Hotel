@@ -3,9 +3,9 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+    import axios from 'axios';
 
-export default {
-  
-}
+    export default {
+    
+    }
 </script>

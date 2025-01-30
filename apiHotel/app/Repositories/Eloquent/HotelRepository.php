@@ -17,13 +17,13 @@ class HotelRepository implements HotelDetailContract
     public function create(array $data)
     {
         $hotel = HotelDetail::create($data);
-
-        for ($a = 1; $a <= $hotel->number_of_rooms; $a++)
+        
+        for ($number = 1; $number <= $hotel->number_of_rooms; $number++)
         {
             DetailRooms::create([
                 'capacity' => 2,
-                'price_for_night' => 25.00,
-                'number_room' => $a,
+                'price_for_night' => rand(20, 45),
+                'number_room' => $number,
                 'hotel_id' => $hotel->id,
                 
             ]);

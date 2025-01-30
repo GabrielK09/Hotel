@@ -1,9 +1,11 @@
 {
-    "name": "Laura Refosco",
-    "cnpj": "12345456565",
-    "address": "Rua das Flores",
-    "number": "21",
-    "account": "reboco@gmail",
-    "password": "Teste"
-
-}
+    "name": "Nome da Empresa",
+    "cnpj": "000000000",
+    "email": "email@empresa.com",
+    "address": "Rua Exemplo, 123",
+    "number": "123",
+    "number_of_rooms": 50,
+    "number_of_employees": 10,
+    "total_busy_rooms": 20
+  }
+  

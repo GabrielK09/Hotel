@@ -14,12 +14,31 @@ class RoomService
         
     }
 
+
+    public function allRooms(int $active)
+    {
+        try {
+            return response()->json([
+                'success' => true,
+                'all' => $this->roomRepository->all($active)
+                
+            ]);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'success' => false,
+                'th' => $th->getMessage(),
+                'line' => $th->getLine()
+            ]);
+        }
+    }
+
     public function create(array $data)
     {
         try {
-            $this->roomRepository->create($data);
+
             return response()->json([
-                'success' => true
+                'success' => true,
+                'create' => $this->roomRepository->create($data)
 
             ], 201);
         } catch (\Throwable $th) {

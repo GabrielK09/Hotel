@@ -14,37 +14,41 @@ class RoomRepository implements RoomContract
 {
     public function all(int $active)
     {
-        return DetailRooms::paginate(10);
+        return DetailRooms::all();
 
     }
 
     public function create(array $data)
     {
         $customer = Customer::where('id', $data['customer_id'])->first();
-        $room = DetailRooms::where('id', $data['room_id'])->first();
+        $detailRoom = DetailRooms::where('id', $data['room_id'])->first();
         
-        $hotel = HotelDetail::where('id',$room->hotel_id)->first();
+        $hotel = HotelDetail::where('id', $detailRoom->hotel_id)->first();
         
-        Room::create([
+        $room = Room::create([
             'customer_id' => $customer->id,
             'customer' => $customer->name,
-            'room_id' => $room->id,
-            'number_room' => $room->number_room
+            'room_id' => $detailRoom->id,
+            'number_room' => $detailRoom->number_room
+            
         ]);
 
         $hotel->update([
-            'total_busy_rooms' => $room->sum('busy')
+            'total_busy_rooms' => $detailRoom->sum('busy')
             
         ]);
         
         $hotel->save();
 
-        $room->update([
+        $detailRoom->update([
            'busy' => 1
 
         ]);
 
-        $room->save();
+        $detailRoom->save();
+
+        
+        return $room->count('customer_id');
 
     }
 

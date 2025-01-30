@@ -14,6 +14,11 @@ class RoomController extends Controller
         $this->roomService = $roomService;
     }
 
+    public function allRooms()
+    {
+        return $this->roomService->allRooms(1);
+    }
+
     public function create(RoomRequest $request)
     {
         $data = $request->validated();
