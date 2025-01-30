@@ -20,6 +20,7 @@ class HotelDetail extends Model
         'number',
         'number_of_rooms',
         'number_of_employees',
+        'total_busy_rooms',
         
     ];
 }

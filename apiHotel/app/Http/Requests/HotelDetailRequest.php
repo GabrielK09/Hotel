@@ -3,8 +3,6 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Contracts\Validation\Validator;
-use Illuminate\Http\Exceptions\HttpResponseException;
 
 class HotelDetailRequest extends FormRequest
 {
@@ -31,6 +29,7 @@ class HotelDetailRequest extends FormRequest
             'number' => [$required],
             'number_of_rooms' => [$required],
             'number_of_employees' => [$required],
+            'total_busy_rooms' => [$required],
             
         ];
         
@@ -56,21 +55,10 @@ class HotelDetailRequest extends FormRequest
 
             'number.required' => 'O campo numero do endereço é obrigátorio',
             'number_of_rooms.required' => 'O campo numero de quartos é obrigátorio',
-            'number_of_employees.required' => 'O campo numero de funcionários é obrigátorio',
+            'number_of_employees.required' => 'O campo numero de funcionários é obrigátorio'
 
         ];
     }
-
-    /*public function failedValidation(Validator $validator)
-    {
-        throw new HttpResponseException(
-            response()->json([
-                'message' => 'Erro de validação ( Hotel Detail )',
-                'errors' => $validator->errors(),
-
-            ], 422)
-        );
-    }*/
 
 }
  

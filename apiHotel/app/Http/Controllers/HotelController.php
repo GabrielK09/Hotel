@@ -15,7 +15,7 @@ class HotelController extends Controller
         $this->hotelService = $hotelService;
     }
 
-    public function all()
+    public function allHotel()
     {
         return $this->hotelService->all(1);
     }
@@ -34,7 +34,7 @@ class HotelController extends Controller
 
     }
 
-    public function find(Request $request)
+    public function findHotel(Request $request)
     {
         return $this->hotelService->findHotel($request->input('param'));
         

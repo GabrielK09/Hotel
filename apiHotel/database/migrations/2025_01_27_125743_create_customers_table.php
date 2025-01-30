@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string('name', 120);
-            $table->string('cnpj', 14)->nullable();
-            $table->string('cpf', 11)->nullable();
+            $table->string('cnpj', 14)->nullable()->unique();
+            $table->string('cpf', 11)->nullable()->unique();
             $table->string('address', 120);
             $table->integer('number', false, 20);
-            $table->string('account', 120);
+            $table->string('account', 120)->unique();
             $table->string('password', 120);    
             $table->boolean('active', 1)->default(1);
             $table->timestamps();

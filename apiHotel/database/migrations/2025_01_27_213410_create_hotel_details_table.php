@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('number', false, 20);
             $table->integer('number_of_rooms', false, 20);
             $table->integer('number_of_employees', false, 20);
+            $table->string('total_busy_rooms', 120)->default(0);
             
             $table->timestamps();
         });

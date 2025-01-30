@@ -6,20 +6,22 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Notifications\Notifiable;
 
-class HotelRoom extends Model
+class DetailRooms extends Model
 {
     use HasFactory, Notifiable;
 
-    protected $table = 'hotel_rooms';
+    protected $table = 'detail_rooms';
 
     protected $fillable = [
-        'customer_id',
-        'customer',
         'capacity',
-        'level',
         'price_for_night',
-        'number_room',
         'busy',
+        'hotel_id',
+        'number_room',
 
+    ];
+
+    protected $hidden = [
+        'hotel_id'
     ];
 }

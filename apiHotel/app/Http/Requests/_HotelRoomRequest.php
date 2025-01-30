@@ -3,10 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Contracts\Validation\Validator;
-use Illuminate\Http\Exceptions\HttpResponseException;
 
-class HotelRommRequest extends FormRequest
+
+class HotelRoomRequest extends FormRequest
 {   
     
     public function authorize(): bool
@@ -24,7 +23,6 @@ class HotelRommRequest extends FormRequest
         $required = $this->isMethod('post') ? 'required' : 'sometimes';
 
         return [
-            'customer_id' => ['required', 'string'],
             'capacity' => [$required, 'string'],
             'level' => [$required, 'string'],
             'price_for_night' => [$required, 'number'],
@@ -47,17 +45,5 @@ class HotelRommRequest extends FormRequest
             'busy.required' => 'É necessário informar se o quarto está ou não ocupado'
 
         ];
-    }
-
-    public function failedValidation(Validator $validator)
-    {
-        throw new HttpResponseException(
-            response()->json([
-                'message' => 'Erro na criação do quarto ( Hotel Room )',
-                'errors' => $validator->errors(),
-
-            ], 422)
-        );
-        
     }
 }
