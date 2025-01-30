@@ -11,7 +11,7 @@ class UserRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class UserRequest extends FormRequest
         $required = $this->isMethod('post') ? 'required' : 'sometimes';
 
         return [
-            
+            'name' => "$required|string|max:255",
+            'email' => "$required|email|max:255|unique:users,email",
+            'password' => "$required|min:0",
         ];
     }
 }
