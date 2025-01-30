@@ -6,7 +6,7 @@
         <div class="add-product">
             <label for="product">Produto:</label>
             <input v-model="newProduct" @input="searchProduct" type="text" id="product" placeholder="Search..." />
-            <ul v-if="searchResults.length" class="search-results">
+            <ul v-if="searchResults" class="search-results">
                 <li
                     v-for="product in searchResults"
                     :key="product.id"
@@ -41,9 +41,9 @@
                 <tbody>
                     <tr v-for="(product, index) in products" :key="index">
                         <td>{{ product.name }}</td>
-                        <td>{{ ProductsView.quantity }}</td>
+                        <td>{{ Product.quantity }}</td>
                         <td>R$ {{ product.price.toFixed(2) }}</td>
-                        <td>R$ {{ (product.view * product.price).toFixed(2) }}</td>
+                        <td>R$ {{ (product.quantity * product.price).toFixed(2) }}</td>
                         <td><button @click="removeProduct(index)">Remover</button></td>
                     </tr>
                 </tbody>
@@ -52,7 +52,7 @@
 
         <!-- Resumo da venda -->>
          <div class="sale-summary">
-            <h2>Resumo da Venda</h2>
+            <h2>Valores:</h2>
             <p><strong>Total:</strong> R$ {{ total.toFixed(2) }}</p>
             <button @click="emitNfce">Emitir NFC-e</button>
          </div>
@@ -62,11 +62,18 @@
 <script>
 
 export default {
-      
+      data(){
+        return {
+          newProduct: {
+            price: null,
+            quantity: null,
+            
+          }
+        }
+      },
     methods: {
-
         async emitNfce() {
-            if (this.products === 0)
+            if (this.products === 0){}
         }
 
         

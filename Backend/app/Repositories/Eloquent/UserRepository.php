@@ -3,6 +3,7 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserRepository
 {
@@ -15,7 +16,11 @@ class UserRepository
     }
 
     public function store(array $data){
-        return User::create($data);
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password'])
+        ]);
     }
 
     public function update(array $data, int $id){
