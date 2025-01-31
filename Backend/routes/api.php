@@ -8,16 +8,15 @@ use App\Http\Controllers\{
     UserController,
     NfceController
 };
-use App\Http\Middleware\UserAuth;
 
 Route::get('/', function () {
     return response()->json(['message' => 'API funcionando!']);
 });
 
 // products routes
-Route::middleware([UserAuth::class])->prefix('products')->group( function(){
+Route::prefix('products')->group( function(){
 
-    Route::get('/', [ProductsController::class, 'getAll'])->withoutMiddleware([UserAuth::class]);
+    Route::get('/', [ProductsController::class, 'getAll']);
     Route::post('/', [ProductsController::class, 'store']);
     Route::get('/{id}', [ProductsController::class, 'findByID']);
     Route::put('/{id}', [ProductsController::class, 'update']);
