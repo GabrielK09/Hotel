@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Room;
 use Illuminate\Foundation\Http\FormRequest;
 
 class RoomRequest extends FormRequest
@@ -24,10 +25,18 @@ class RoomRequest extends FormRequest
         $required = $this->isMethod('post') ? 'required' : 'sometimes';
     
         return [
-            'customer_id' => [$required, 'unique:rooms,customer_id'],
-            'room_id'  => [$required, 'unique:rooms,room_id'],
+            'room_id'  => [$required],
             'start_period' => $required,
             'end_period' => $required,
+            'customer_id' => [$required, function ($attribute, $value, $fail) {
+                $room = Room::where('customer_id', $value)->first();
+                if ($room->exists())
+                {
+                    $fail("Esse usuário já está associado a um quarto. Número do quarto $room->room_id | Usuário: $room->customer & ID: $room->customer_id");
+                    
+                }
+                
+            }],
         ];
     }
 
@@ -38,8 +47,6 @@ class RoomRequest extends FormRequest
             'room_id.required' => 'Campo identificador do quarto necessário',
             'start_period.required' => 'Não foi definida uma data inicial da pousada',
             'end_period.required' => 'Não foi definida uma data final da pousada',
-
-            'customer_id.unique' => 'Esse usuário já está associado a um quarto'
 
         ];
     }

@@ -36,7 +36,7 @@ class RoomService
     public function create(array $data)
     {
         try {
-            $create = $this->roomRepository->checkRoom($data, $data['customer_id']);
+            $create = $this->roomRepository->create($data);
             if($create == true)
             {
                 return response()->json([

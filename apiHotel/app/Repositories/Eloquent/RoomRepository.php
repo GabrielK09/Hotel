@@ -18,23 +18,6 @@ class RoomRepository implements RoomContract
 
     }
 
-    public function checkRoom(array $data, int $user_id)
-    {
-        $room = Room::where('customer_id', $user_id)->first();
-
-        if($room)
-        {
-            if($room->count('customer_id') >= 1)
-            {
-                return false;
-
-            }
-        }
-
-        return $this->create($data);
-
-    }
-
     public function create(array $data)
     {
         $customer = Customer::where('id', $data['customer_id'])->first();
@@ -68,7 +51,7 @@ class RoomRepository implements RoomContract
 
             $detailRoom->save();
 
-            return true;
+            return $room;
 
         }
     
