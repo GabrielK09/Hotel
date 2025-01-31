@@ -28,6 +28,7 @@ class RoomService
                 'success' => false,
                 'th' => $th->getMessage(),
                 'line' => $th->getLine()
+
             ]);
         }
     }
@@ -35,17 +36,29 @@ class RoomService
     public function create(array $data)
     {
         try {
+            $create = $this->roomRepository->checkRoom($data, $data['customer_id']);
+            if($create == true)
+            {
+                return response()->json([
+                    'success' => true,
+                    'crate' => $create
+    
+                ], 201);
+            }
 
             return response()->json([
-                'success' => true,
-                'create' => $this->roomRepository->create($data)
+                'success' => false,
+                'crate' => $create
 
-            ], 201);
+            ], 400);
+            
         } catch (\Throwable $th) {
             return response()->json([
                 'success' => false,
                 'th' => $th->getMessage(),
+                'file' => $th->getFile(),
                 'line' => $th->getLine()
+
             ]);
         }
     }

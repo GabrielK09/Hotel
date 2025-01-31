@@ -12,6 +12,8 @@ class Room extends Model
         'customer',
         'room_id',
         'number_room',
+        'start_period',
+        'end_period',
         'active'
 
     ];

@@ -29,7 +29,6 @@ class HotelDetailRequest extends FormRequest
             'number' => [$required],
             'number_of_rooms' => [$required],
             'number_of_employees' => [$required],
-            'total_busy_rooms' => [$required],
             
         ];
         
