@@ -3,13 +3,17 @@
 namespace App\Http\Requests;
 
 use App\Models\Room;
+use App\Service\RoomService;
 use Illuminate\Foundation\Http\FormRequest;
 
 class RoomRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
+    protected $roomService;
+    public function __construct(RoomService $roomService)
+    {
+        $this->roomService = $roomService;
+
+    }
     public function authorize(): bool
     {
         return true;
@@ -23,19 +27,17 @@ class RoomRequest extends FormRequest
     public function rules(): array
     {
         $required = $this->isMethod('post') ? 'required' : 'sometimes';
-    
+        
         return [
-            'room_id'  => [$required],
             'start_period' => $required,
             'end_period' => $required,
+            'room_id'  => [$required],
             'customer_id' => [$required, function ($attribute, $value, $fail) {
-                $room = Room::where('customer_id', $value)->first();
-                if ($room->exists())
+                if(Room::where('customer_id', $value)->exists())
                 {
-                    $fail("Esse usuário já está associado a um quarto. Número do quarto $room->room_id | Usuário: $room->customer & ID: $room->customer_id");
-                    
+                    $fail("Esse usuário já está associado ao quarto");
+
                 }
-                
             }],
         ];
     }

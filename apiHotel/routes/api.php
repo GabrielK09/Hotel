@@ -16,6 +16,7 @@ Route::prefix('v1')->group( function (){
         Route::get('/find', [HotelController::class, 'findHotel']);
         Route::post('/create', [HotelController::class, 'create']);
 
+        Route::get('/room', [RoomController::class, 'find']);
     });
 
     Route::prefix('customer')->group( function (){

@@ -17,9 +17,4 @@ class Room extends Model
         'active'
 
     ];
-
-    protected $hidden = [
-        'customer_id',
-        'room_id',
-    ];
 }

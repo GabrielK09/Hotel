@@ -62,5 +62,39 @@ class RoomService
             ]);
         }
     }
+
+    public function find(string $param)
+    {
+        try {
+            //return response()->json( $this->roomRepository->find($param));
+            return $this->roomRepository->find($param);
+            
+        } catch (\Throwable $th) {
+            return response()->json([
+                'success' => false,
+                'th' => $th->getMessage(),
+                'file' => $th->getFile(),
+                'line' => $th->getLine()
+
+            ]);
+        }
+    }
+
+    public function findbyCustomer(int $param)
+    {
+        try {
+            //return response()->json( $this->roomRepository->find($param));
+            return $this->roomRepository->find($param);
+            
+        } catch (\Throwable $th) {
+            return response()->json([
+                'success' => false,
+                'th' => $th->getMessage(),
+                'file' => $th->getFile(),
+                'line' => $th->getLine()
+
+            ]);
+        }
+    }
     
 }

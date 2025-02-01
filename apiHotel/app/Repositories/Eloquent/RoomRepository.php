@@ -14,7 +14,7 @@ class RoomRepository implements RoomContract
 {
     public function all(int $active)
     {
-        return DetailRooms::all();
+        return Room::all();
 
     }
 
@@ -24,7 +24,7 @@ class RoomRepository implements RoomContract
         $detailRoom = DetailRooms::where('id', $data['room_id'])->first();
         
         $hotel = HotelDetail::where('id', $detailRoom->hotel_id)->first();
-            
+        
         if($customer && $detailRoom && $hotel)
         {
             $room = Room::create([
@@ -53,12 +53,19 @@ class RoomRepository implements RoomContract
 
             return $room;
 
+        } else if (!$customer){
+            return "Cliente não encontrado";
+
+        } else if (!$detailRoom){
+            return "Quarto não encontrado";
+
+        } else if (!$hotel){
+            return "Hotel não encontrado";
+            
         }
     
         return false;
     }
-
-    
 
     public function checkDate()
     {
@@ -69,7 +76,12 @@ class RoomRepository implements RoomContract
     public function find(string $param)
     {
         return Room::where('id', $param)->first();
-    }    
+    }
+
+    public function findbyCustomer(int $param)
+    {
+        return Room::where('customer_id', $param)->first()?->fresh();
+    }
 
     public function update(array $data, int $id)
     {

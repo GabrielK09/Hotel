@@ -4,8 +4,8 @@
     "email": "email@empresa.com",
     "address": "Rua Exemplo, 123",
     "number": "123",
-    "number_of_rooms": 50,
-    "number_of_employees": 10,
-    "total_busy_rooms": 20
+    "number_of_rooms": 10,
+    "number_of_employees": 10
+    
   }
   

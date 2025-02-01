@@ -24,4 +24,9 @@ class RoomController extends Controller
         $data = $request->validated();
         return $this->roomService->create($data);
     }
+
+    public function find(RoomRequest $request)
+    {
+        return $this->roomService->findbyCustomer($request->input('id'));
+    }
 }   
