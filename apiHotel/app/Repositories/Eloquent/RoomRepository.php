@@ -5,7 +5,8 @@ use App\Models\{
     Customer,
     DetailRooms,
     HotelDetail,
-    Room
+    Room,
+    CheckIn
 };
 
 use App\Repositories\Interface\RoomContract;
@@ -44,8 +45,11 @@ class RoomRepository implements RoomContract
             
             $hotel->save();
 
+            
+
             $detailRoom->update([
-            'busy' => 1
+                'busy' => 1,
+                'capacity' => $detailRoom->capacity - 1
 
             ]);
 
@@ -67,6 +71,44 @@ class RoomRepository implements RoomContract
         return false;
     }
 
+    public function checkIn(array $data)
+    {
+        $detailRoom = DetailRooms::where('id', $data['room_id'])->first();
+        $customer = Customer::where('id', $data['customer_id'])->first();
+        $room = $this->find($data['customer_id']);
+
+        if($room)
+        {
+            $room->update([
+                'active' => 0
+
+            ]);
+
+            CheckIn::create([
+                'customer_id' => $customer->id,
+                'customer' => $customer->name,
+                'room_id' => $room->id,
+                'number_room' => $room->number_room,
+                'end_period' => $data['end_period'],
+                
+            ]);
+            
+            $room->save();
+           
+            if($room->where('active', 1)->count('active') == 0) {
+                $detailRoom->update([
+                    'capacity' => $room->where('customer_id', $data['customer_id'])->count('active'),
+                    'busy' => 0
+
+                ]);
+
+                $detailRoom->save();
+            }
+
+            return $room;
+        }
+    }
+
     public function checkDate()
     {
         
@@ -76,11 +118,6 @@ class RoomRepository implements RoomContract
     public function find(string $param)
     {
         return Room::where('id', $param)->first();
-    }
-
-    public function findbyCustomer(int $param)
-    {
-        return Room::where('customer_id', $param)->first()?->fresh();
     }
 
     public function update(array $data, int $id)

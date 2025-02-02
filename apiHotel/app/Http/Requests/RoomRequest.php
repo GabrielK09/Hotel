@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\DetailRooms;
 use App\Models\Room;
 use App\Service\RoomService;
 use Illuminate\Foundation\Http\FormRequest;
@@ -31,7 +32,22 @@ class RoomRequest extends FormRequest
         return [
             'start_period' => $required,
             'end_period' => $required,
-            'room_id'  => [$required],
+            'room_id'  => [$required, function ($attribute, $value, $fail) {
+                $detailRoom = DetailRooms::where('id', $value)->first();
+                if(
+                    $detailRoom->exists() &&
+                    $detailRoom->busy == 1 &&
+                    $detailRoom->capacity == 0
+                    /*DetailRooms::where('id', $value)->exists() && 
+                    DetailRooms::where('id', $value)->first()->busy == 1 && 
+                    DetailRooms::where('id', $value)->first()->capacity == 0*/
+                )
+                {
+                    $fail("Esse quarto já estáo ocupado ou cheio");
+
+                }
+            }],
+
             'customer_id' => [$required, function ($attribute, $value, $fail) {
                 if(Room::where('customer_id', $value)->exists())
                 {

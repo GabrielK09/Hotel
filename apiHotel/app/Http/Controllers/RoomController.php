@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CheckInRequest;
 use App\Http\Requests\RoomRequest;
 use App\Service\RoomService;
 
@@ -27,6 +28,12 @@ class RoomController extends Controller
 
     public function find(RoomRequest $request)
     {
-        return $this->roomService->findbyCustomer($request->input('id'));
+        return $this->roomService->find($request->input('id'));
+    }
+
+    public function checkIn(CheckInRequest $request)
+    {
+        $data = $request->validated();
+        return $this->roomService->checkIn($data);
     }
 }   

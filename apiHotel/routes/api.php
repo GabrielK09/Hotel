@@ -1,8 +1,12 @@
 <?php
 
-use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\HotelController;
-use App\Http\Controllers\RoomController;
+use App\Http\Controllers\{
+    CustomerController,
+    HotelController,
+    RoomController
+    
+};
+
 use Illuminate\Support\Facades\Route;
 
 Route::post('/', function (){
@@ -15,7 +19,6 @@ Route::prefix('v1')->group( function (){
         Route::get('/all', [HotelController::class, 'allHotel']);
         Route::get('/find', [HotelController::class, 'findHotel']);
         Route::post('/create', [HotelController::class, 'create']);
-
         Route::get('/room', [RoomController::class, 'find']);
     });
 
@@ -29,5 +32,7 @@ Route::prefix('v1')->group( function (){
     Route::prefix('stay')->group(function () {
         Route::get('/rooms', [RoomController::class, 'allRooms']);
         Route::post('/room', [RoomController::class, 'create']);
+        Route::put('/check-in', [RoomController::class, 'checkIn']);
+
     });
 });

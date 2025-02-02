@@ -79,13 +79,16 @@ class RoomService
             ]);
         }
     }
-
-    public function findbyCustomer(int $param)
+    
+    public function checkIn(array $data)
     {
         try {
-            //return response()->json( $this->roomRepository->find($param));
-            return $this->roomRepository->find($param);
-            
+            $this->roomRepository->checkIn($data);
+            return response()->json([
+                'success' => true,
+                //'check-in' => $checkIn,
+                'message' => 'Check-in bem sucedido!'
+            ]);
         } catch (\Throwable $th) {
             return response()->json([
                 'success' => false,
@@ -96,5 +99,4 @@ class RoomService
             ]);
         }
     }
-    
 }

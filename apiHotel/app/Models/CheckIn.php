@@ -4,22 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Room extends Model
+class CheckIn extends Model
 {
-    protected $table = 'rooms';
+    protected $table = 'check_ins';
     protected $fillable = [
         'customer_id',
         'customer',
         'room_id',
         'number_room',
-        'start_period',
+        
         'end_period',
-        'active'
-
-    ];
-
-    protected $hidden = [
-        'customer_id',
-        'room_id',
     ];
 }
