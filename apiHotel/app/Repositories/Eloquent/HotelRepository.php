@@ -2,9 +2,13 @@
 
 namespace App\Repositories\Eloquent;
 
-use App\Models\DetailRooms;
+use App\Models\{
+    DetailRooms,
+    HotelDetail,
+    Capacity
+};
+
 use App\Repositories\Interface\HotelDetailContract;
-use App\Models\HotelDetail;
 
 class HotelRepository implements HotelDetailContract
 {
@@ -20,17 +24,22 @@ class HotelRepository implements HotelDetailContract
         
         for ($number = 1; $number <= $hotel->number_of_rooms; $number++)
         {
-            DetailRooms::create([
+            $detailRoom = DetailRooms::create([
                 'capacity' => rand(2, 5),
                 'price_for_night' => rand(20, 45),
                 'number_room' => $number,
                 'hotel_id' => $hotel->id,
                 
             ]);
+
+            Capacity::create([
+                'room_id' => $detailRoom->id,
+                'capacity' => $detailRoom->capacity
+            ]);
+            
         }
-    
-        return $hotel;
-        
+
+        return $hotel;        
     }
 
     public function update(array $data, int $id)

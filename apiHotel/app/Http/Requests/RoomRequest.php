@@ -38,9 +38,7 @@ class RoomRequest extends FormRequest
                     $detailRoom->exists() &&
                     $detailRoom->busy == 1 &&
                     $detailRoom->capacity == 0
-                    /*DetailRooms::where('id', $value)->exists() && 
-                    DetailRooms::where('id', $value)->first()->busy == 1 && 
-                    DetailRooms::where('id', $value)->first()->capacity == 0*/
+                    
                 )
                 {
                     $fail("Esse quarto já estáo ocupado ou cheio");
@@ -49,7 +47,7 @@ class RoomRequest extends FormRequest
             }],
 
             'customer_id' => [$required, function ($attribute, $value, $fail) {
-                if(Room::where('customer_id', $value)->exists())
+                if(Room::where('customer_id', $value)->exists() && Room::where('customer_id', $value)->first()->active == 1)
                 {
                     $fail("Esse usuário já está associado ao quarto");
 

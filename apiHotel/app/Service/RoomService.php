@@ -14,7 +14,6 @@ class RoomService
         
     }
 
-
     public function allRooms(int $active)
     {
         try {
@@ -23,6 +22,7 @@ class RoomService
                 'all' => $this->roomRepository->all($active)
                 
             ]);
+
         } catch (\Throwable $th) {
             return response()->json([
                 'success' => false,
@@ -59,7 +59,7 @@ class RoomService
                 'file' => $th->getFile(),
                 'line' => $th->getLine()
 
-            ]);
+            ], 400);
         }
     }
 
@@ -76,18 +76,19 @@ class RoomService
                 'file' => $th->getFile(),
                 'line' => $th->getLine()
 
-            ]);
+            ], 400);
         }
     }
     
-    public function checkIn(array $data)
+    public function checkIn(array $data, int $id)
     {
         try {
-            $this->roomRepository->checkIn($data);
+            
             return response()->json([
                 'success' => true,
-                //'check-in' => $checkIn,
-                'message' => 'Check-in bem sucedido!'
+                'message' => 'Check-in bem sucedido!',
+                'check-in' => $this->roomRepository->checkIn($data, $id)
+
             ]);
         } catch (\Throwable $th) {
             return response()->json([
@@ -96,7 +97,7 @@ class RoomService
                 'file' => $th->getFile(),
                 'line' => $th->getLine()
 
-            ]);
+            ], 400);
         }
     }
 }

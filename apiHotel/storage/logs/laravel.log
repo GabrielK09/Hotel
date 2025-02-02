@@ -1,0 +1,8 @@
+[2025-02-02 20:30:54] local.INFO: Quarto encontrado: {"id":1,"customer":"Pessoa teste 1","number_room":"4","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-02T20:24:57.000000Z","updated_at":"2025-02-02T20:30:20.000000Z"}  
+[2025-02-02 20:30:54] local.INFO: Ativos no quarto: 1  
+[2025-02-02 20:31:52] local.INFO: Quarto encontrado: {"id":1,"customer":"Pessoa teste 1","number_room":"4","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-02T20:24:57.000000Z","updated_at":"2025-02-02T20:30:20.000000Z"}  
+[2025-02-02 20:31:52] local.INFO: Ativos no quarto: 1  
+[2025-02-02 20:32:24] local.INFO: Quarto encontrado: {"id":1,"customer":"Pessoa teste 1","number_room":"4","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-02T20:24:57.000000Z","updated_at":"2025-02-02T20:30:20.000000Z"}  
+[2025-02-02 20:32:24] local.INFO: Ativos no quarto: 1  
+[2025-02-02 20:32:38] local.INFO: Quarto encontrado: {"id":1,"customer":"Pessoa teste 1","number_room":"4","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-02T20:24:57.000000Z","updated_at":"2025-02-02T20:30:20.000000Z"}  
+[2025-02-02 20:32:38] local.INFO: Ativos no quarto: 1  

@@ -51,7 +51,7 @@ class HotelService
             ]);
         }
     }
-
+    
     public function update(array $data, int $id)
     {
         try {
