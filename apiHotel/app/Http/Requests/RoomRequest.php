@@ -2,17 +2,15 @@
 
 namespace App\Http\Requests;
 
-use App\Models\DetailRooms;
-use App\Models\Room;
-use App\Service\RoomService;
+use App\Repositories\Eloquent\RoomRepository;
 use Illuminate\Foundation\Http\FormRequest;
 
 class RoomRequest extends FormRequest
 {
-    protected $roomService;
-    public function __construct(RoomService $roomService)
+    protected $roomRepository;
+    public function __construct(RoomRepository $roomRepository)
     {
-        $this->roomService = $roomService;
+        $this->roomRepository = $roomRepository;
 
     }
     public function authorize(): bool
@@ -33,7 +31,8 @@ class RoomRequest extends FormRequest
             'start_period' => $required,
             'end_period' => $required,
             'room_id'  => [$required, function ($attribute, $value, $fail) {
-                $detailRoom = DetailRooms::where('id', $value)->first();
+                $detailRoom = $this->roomRepository->find($value);
+
                 if(
                     $detailRoom->exists() &&
                     $detailRoom->busy == 1 &&
@@ -47,7 +46,13 @@ class RoomRequest extends FormRequest
             }],
 
             'customer_id' => [$required, function ($attribute, $value, $fail) {
-                if(Room::where('customer_id', $value)->exists() && Room::where('customer_id', $value)->first()->active == 1)
+                $room = $this->roomRepository->findByCustomerID($value);
+                if(
+                    $room &&
+                    $room->exists() &&
+                    $room->active == 1
+                    
+                )
                 {
                     $fail("Esse usuário já está associado ao quarto");
 

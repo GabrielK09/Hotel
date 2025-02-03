@@ -32,7 +32,7 @@ Route::prefix('v1')->group( function (){
     Route::prefix('stay')->group(function () {
         Route::get('/rooms', [RoomController::class, 'allRooms']);
         Route::post('/room', [RoomController::class, 'create']);
-        Route::put('/check-in/{id}', [RoomController::class, 'checkIn']);
+        Route::put('/check-in', [RoomController::class, 'checkIn']);
 
     });
 });

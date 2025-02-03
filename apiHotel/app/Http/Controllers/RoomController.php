@@ -31,9 +31,9 @@ class RoomController extends Controller
         return $this->roomService->find($request->input('id'));
     }
 
-    public function checkIn(CheckInRequest $request, int $id)
+    public function checkIn(CheckInRequest $request)
     {
         $data = $request->validated();
-        return $this->roomService->checkIn($data, $id);
+        return $this->roomService->checkIn($data);
     }
 }   

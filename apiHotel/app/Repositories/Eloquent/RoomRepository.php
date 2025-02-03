@@ -47,8 +47,6 @@ class RoomRepository implements RoomContract
             
             $hotel->save();
 
-            
-
             $detailRoom->update([
                 'busy' => 1,
                 'capacity' => $detailRoom->capacity - 1
@@ -73,77 +71,97 @@ class RoomRepository implements RoomContract
         return false;
     }
 
-    public function checkIn(array $data, int $id)
-    {
-        $customer = Customer::where('id', $data['customer_id'])->first();
-        $room = $this->findByRoomID($id);
-        Log::info("Quarto encontrado: $room");
-        if($room && $customer)
+    public function checkIn(array $data)
+    {  
+        $capacity = Capacity::where('id', $data['room_id'])->first(); // Pega a quantia anterior
+        $rooms = $this->findByRoomID($data['room_id']);
+        $customer = $this->findByCustomerID($data['customer_id']);
+        $detailRooms = DetailRooms::where('id', $data['room_id'])->first();
+        
+        Log::info('Dados de entrada:' . $data['room_id']);
+        Log::info("Quarto encontrado: \n$rooms");
+
+        if($customer)
         {
+            Log::info("Vai zerar os clientes");
+            $customer->update([
+                'active' => 0
+
+            ]);
+
+            /*
             CheckIn::create([
-                'customer_id' => $customer->id,
+                'customer_id' => $data['customer_id'],
                 'customer' => $customer->name,
-                'room_id' => $room->id,
-                'number_room' => $room->number_room,
-                'end_period' => $data['end_period'],
-                
+                'room_id' => $data['room_id'],
+                'number_room' => $rooms->number_room,
+                'end_period' => $data['end_period']
+
+            ]); */
+
+            $detailRooms->update([
+                'capacity' => $capacity->capacity - 1
+
             ]);
+            
+            $detailRooms->save();
+            Log::info("Vai colocar a capacidade do quarto - 1");
+            Log::info($detailRooms);
 
-            $room->update([
-                'active' => 0 // Desocupa o cliente do quarto
+            $customer->save();
 
-            ]);
+        }
 
-            $capacity = Capacity::where('id', $data['room_id'])->first(); // Pega a quantia anterior
-            $detailRoom = DetailRooms::where('id', $data['room_id'])->first();
+        Log::info("Vai calcular o count->active");
+        foreach ($rooms as $room) {
+            $count = $this->countActive($room, $data['room_id']);
 
-            Log::info('Ativos no quarto: ' . $room->where('active', '1')->count('active'));
-
-            if($room->where('active', '1')->count('active') <= 0)
+            if($count <= 0)
             {
-                Log::info('Vai voltar para a quantia do quarto');
+                Log::info("Vai retornar o quarto como vago, quarto: $detailRooms");
+                $detailRooms->update([
+                    'busy' => 0,
+                    'capacity' => $capacity->capacity
 
-                $detailRoom->update([
-                    'capacity' => $capacity->capacity - 1
-    
                 ]);
 
-                $detailRoom->save();
-
+                
+                Log::info("Quarto pós update");
+                Log::info($room);
             }
-            
-            $room->save();
-
-            return [
-                'local' => 'Linha 118',
-                'customer' => $customer,
-                'room' => $room
-            ];;
-            
         }
-        return [
-            'local' => 'Linha 125',
-            'customer' => $customer,
-            'room' => $room
-        ];
-    }
-
-    public function checkDate()
-    {
         
     }
 
-
-    public function find(string $param)
+    public function countActive(object $room, int $room_id)
     {
-        Log::info("Param: $param");
-        return Room::where('id', $param)->first();
+        Log::info("Chamou o countActive");
+        return $room->where('active', 1)
+                    ->where('room_id', $room_id)
+                    ->count('active');
+        
+    }
+
+    public function findByCustomerID(string $id)
+    {
+        Log::info("Vai procurar o quarto pelo cliente e se está ativo");
+        return Room::where('customer_id', $id)
+                        ->where('active', 1)
+                        ->first();
 
     }
 
-    public function findByRoomID(int $id)
+    public function findByRoomID(string $id)
     {
-        return Room::where('room_id', $id)->first();
+        Log::info("Vai procurar o quarto pelo número dele e se está ativo ou inativo");
+        return Room::where('room_id', $id)
+                        ->get();
+
+    }
+
+    public function find(string $param)
+    {
+        return DetailRooms::where('id', $param)->first();
 
     }
 
@@ -155,6 +173,19 @@ class RoomRepository implements RoomContract
     public function delete(int $id)
     {
         
+    }
+
+    public function calculo(){
+        $carrinho = [];
+        $total = 0;
+
+        foreach ($carrinho as $produto) {
+            $total += $produto->valor_venda;
+
+        }
+        
+        return $total;
+
     }
 
 }

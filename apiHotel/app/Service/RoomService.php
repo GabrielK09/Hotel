@@ -80,14 +80,14 @@ class RoomService
         }
     }
     
-    public function checkIn(array $data, int $id)
+    public function checkIn(array $data)
     {
         try {
             
             return response()->json([
                 'success' => true,
                 'message' => 'Check-in bem sucedido!',
-                'check-in' => $this->roomRepository->checkIn($data, $id)
+                'total' => $this->roomRepository->checkIn($data)
 
             ]);
         } catch (\Throwable $th) {

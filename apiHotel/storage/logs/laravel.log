@@ -1,8 +1,80 @@
-[2025-02-02 20:30:54] local.INFO: Quarto encontrado: {"id":1,"customer":"Pessoa teste 1","number_room":"4","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-02T20:24:57.000000Z","updated_at":"2025-02-02T20:30:20.000000Z"}  
-[2025-02-02 20:30:54] local.INFO: Ativos no quarto: 1  
-[2025-02-02 20:31:52] local.INFO: Quarto encontrado: {"id":1,"customer":"Pessoa teste 1","number_room":"4","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-02T20:24:57.000000Z","updated_at":"2025-02-02T20:30:20.000000Z"}  
-[2025-02-02 20:31:52] local.INFO: Ativos no quarto: 1  
-[2025-02-02 20:32:24] local.INFO: Quarto encontrado: {"id":1,"customer":"Pessoa teste 1","number_room":"4","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-02T20:24:57.000000Z","updated_at":"2025-02-02T20:30:20.000000Z"}  
-[2025-02-02 20:32:24] local.INFO: Ativos no quarto: 1  
-[2025-02-02 20:32:38] local.INFO: Quarto encontrado: {"id":1,"customer":"Pessoa teste 1","number_room":"4","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-02T20:24:57.000000Z","updated_at":"2025-02-02T20:30:20.000000Z"}  
-[2025-02-02 20:32:38] local.INFO: Ativos no quarto: 1  
+[2025-02-03 17:28:55] local.INFO: Vai procurar o quarto pelo número dele e se está ativo  
+[2025-02-03 17:28:55] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
+[2025-02-03 17:28:55] local.INFO: Dados de entrada:2  
+[2025-02-03 17:28:55] local.INFO: Quarto encontrado: 
+[{"id":1,"customer_id":1,"customer":"Laura Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-03T17:20:05.000000Z","updated_at":"2025-02-03T17:27:40.000000Z"},{"id":2,"customer_id":2,"customer":"Gabriel Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-03T17:20:07.000000Z","updated_at":"2025-02-03T17:20:07.000000Z"}]  
+[2025-02-03 17:28:55] local.INFO: Vai zerar os clientes  
+[2025-02-03 17:28:55] local.INFO: Vai colocar a capacidade do quarto - 1  
+[2025-02-03 17:28:55] local.INFO: {"id":2,"capacity":1,"price_for_night":34,"busy":1,"number_room":"2","created_at":"2025-02-03T16:56:26.000000Z","updated_at":"2025-02-03T17:28:55.000000Z"}  
+[2025-02-03 17:28:55] local.INFO: Chamou o countActive  
+[2025-02-03 17:28:55] local.INFO: Vai calcular o count: 1  
+[2025-02-03 17:28:55] local.INFO: Chamou o countActive  
+[2025-02-03 17:28:55] local.INFO: Vai calcular o count: 1  
+[2025-02-03 18:33:37] local.INFO: Vai procurar o quarto pelo número dele e se está ativo ou inativo  
+[2025-02-03 18:33:37] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
+[2025-02-03 18:33:37] local.INFO: Dados de entrada:2  
+[2025-02-03 18:33:37] local.INFO: Quarto encontrado: 
+[{"id":1,"customer_id":1,"customer":"Laura Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-03T17:20:05.000000Z","updated_at":"2025-02-03T17:28:55.000000Z"},{"id":2,"customer_id":2,"customer":"Gabriel Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-03T17:20:07.000000Z","updated_at":"2025-02-03T17:20:07.000000Z"}]  
+[2025-02-03 18:33:37] local.INFO: Vai zerar os clientes  
+[2025-02-03 18:33:37] local.INFO: Vai colocar a capacidade do quarto - 1  
+[2025-02-03 18:33:37] local.INFO: {"id":2,"capacity":1,"price_for_night":34,"busy":1,"number_room":"2","created_at":"2025-02-03T16:56:26.000000Z","updated_at":"2025-02-03T18:33:37.000000Z"}  
+[2025-02-03 18:33:37] local.INFO: Vai calcular o count->active  
+[2025-02-03 18:33:37] local.INFO: Chamou o countActive  
+[2025-02-03 18:33:37] local.INFO: Chamou o countActive  
+[2025-02-03 18:33:58] local.INFO: Vai procurar o quarto pelo número dele e se está ativo ou inativo  
+[2025-02-03 18:33:58] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
+[2025-02-03 18:33:58] local.INFO: Dados de entrada:2  
+[2025-02-03 18:33:58] local.INFO: Quarto encontrado: 
+[{"id":1,"customer_id":1,"customer":"Laura Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-03T17:20:05.000000Z","updated_at":"2025-02-03T18:33:37.000000Z"},{"id":2,"customer_id":2,"customer":"Gabriel Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-03T17:20:07.000000Z","updated_at":"2025-02-03T17:20:07.000000Z"}]  
+[2025-02-03 18:33:58] local.INFO: Vai zerar os clientes  
+[2025-02-03 18:33:58] local.INFO: Vai colocar a capacidade do quarto - 1  
+[2025-02-03 18:33:58] local.INFO: {"id":2,"capacity":1,"price_for_night":34,"busy":1,"number_room":"2","created_at":"2025-02-03T16:56:26.000000Z","updated_at":"2025-02-03T18:33:37.000000Z"}  
+[2025-02-03 18:33:58] local.INFO: Vai calcular o count->active  
+[2025-02-03 18:33:58] local.INFO: Chamou o countActive  
+[2025-02-03 18:33:58] local.INFO: Vai retornar o quarto como vago, quarto: {"id":2,"capacity":1,"price_for_night":34,"busy":1,"number_room":"2","created_at":"2025-02-03T16:56:26.000000Z","updated_at":"2025-02-03T18:33:37.000000Z"}  
+[2025-02-03 18:33:58] local.INFO: Quarto pós update  
+[2025-02-03 18:33:58] local.INFO: {"id":1,"customer_id":1,"customer":"Laura Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-03T17:20:05.000000Z","updated_at":"2025-02-03T18:33:37.000000Z"}  
+[2025-02-03 18:33:58] local.INFO: Chamou o countActive  
+[2025-02-03 18:33:58] local.INFO: Vai retornar o quarto como vago, quarto: {"id":2,"capacity":"2","price_for_night":34,"busy":0,"number_room":"2","created_at":"2025-02-03T16:56:26.000000Z","updated_at":"2025-02-03T18:33:58.000000Z"}  
+[2025-02-03 18:33:58] local.INFO: Quarto pós update  
+[2025-02-03 18:33:58] local.INFO: {"id":2,"customer_id":2,"customer":"Gabriel Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-03T17:20:07.000000Z","updated_at":"2025-02-03T17:20:07.000000Z"}  
+[2025-02-03 18:34:17] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
+[2025-02-03 18:34:19] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
+[2025-02-03 18:34:33] local.INFO: Vai procurar o quarto pelo número dele e se está ativo ou inativo  
+[2025-02-03 18:34:33] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
+[2025-02-03 18:34:33] local.INFO: Dados de entrada:2  
+[2025-02-03 18:34:33] local.INFO: Quarto encontrado: 
+[{"id":1,"customer_id":1,"customer":"Laura Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-03T17:20:05.000000Z","updated_at":"2025-02-03T18:33:37.000000Z"},{"id":2,"customer_id":2,"customer":"Gabriel Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-03T17:20:07.000000Z","updated_at":"2025-02-03T18:33:58.000000Z"},{"id":3,"customer_id":1,"customer":"Laura Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-03T18:34:17.000000Z","updated_at":"2025-02-03T18:34:17.000000Z"},{"id":4,"customer_id":2,"customer":"Gabriel Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-03T18:34:19.000000Z","updated_at":"2025-02-03T18:34:19.000000Z"}]  
+[2025-02-03 18:34:33] local.INFO: Vai zerar os clientes  
+[2025-02-03 18:34:33] local.INFO: Vai colocar a capacidade do quarto - 1  
+[2025-02-03 18:34:33] local.INFO: {"id":2,"capacity":1,"price_for_night":34,"busy":1,"number_room":"2","created_at":"2025-02-03T16:56:26.000000Z","updated_at":"2025-02-03T18:34:33.000000Z"}  
+[2025-02-03 18:34:33] local.INFO: Vai calcular o count->active  
+[2025-02-03 18:34:33] local.INFO: Chamou o countActive  
+[2025-02-03 18:34:33] local.INFO: Chamou o countActive  
+[2025-02-03 18:34:33] local.INFO: Chamou o countActive  
+[2025-02-03 18:34:33] local.INFO: Chamou o countActive  
+[2025-02-03 18:34:43] local.INFO: Vai procurar o quarto pelo número dele e se está ativo ou inativo  
+[2025-02-03 18:34:43] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
+[2025-02-03 18:34:43] local.INFO: Dados de entrada:2  
+[2025-02-03 18:34:43] local.INFO: Quarto encontrado: 
+[{"id":1,"customer_id":1,"customer":"Laura Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-03T17:20:05.000000Z","updated_at":"2025-02-03T18:33:37.000000Z"},{"id":2,"customer_id":2,"customer":"Gabriel Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-03T17:20:07.000000Z","updated_at":"2025-02-03T18:33:58.000000Z"},{"id":3,"customer_id":1,"customer":"Laura Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-03T18:34:17.000000Z","updated_at":"2025-02-03T18:34:33.000000Z"},{"id":4,"customer_id":2,"customer":"Gabriel Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-03T18:34:19.000000Z","updated_at":"2025-02-03T18:34:19.000000Z"}]  
+[2025-02-03 18:34:43] local.INFO: Vai zerar os clientes  
+[2025-02-03 18:34:43] local.INFO: Vai colocar a capacidade do quarto - 1  
+[2025-02-03 18:34:43] local.INFO: {"id":2,"capacity":1,"price_for_night":34,"busy":1,"number_room":"2","created_at":"2025-02-03T16:56:26.000000Z","updated_at":"2025-02-03T18:34:33.000000Z"}  
+[2025-02-03 18:34:43] local.INFO: Vai calcular o count->active  
+[2025-02-03 18:34:43] local.INFO: Chamou o countActive  
+[2025-02-03 18:34:43] local.INFO: Vai retornar o quarto como vago, quarto: {"id":2,"capacity":1,"price_for_night":34,"busy":1,"number_room":"2","created_at":"2025-02-03T16:56:26.000000Z","updated_at":"2025-02-03T18:34:33.000000Z"}  
+[2025-02-03 18:34:43] local.INFO: Quarto pós update  
+[2025-02-03 18:34:43] local.INFO: {"id":1,"customer_id":1,"customer":"Laura Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-03T17:20:05.000000Z","updated_at":"2025-02-03T18:33:37.000000Z"}  
+[2025-02-03 18:34:43] local.INFO: Chamou o countActive  
+[2025-02-03 18:34:43] local.INFO: Vai retornar o quarto como vago, quarto: {"id":2,"capacity":"2","price_for_night":34,"busy":0,"number_room":"2","created_at":"2025-02-03T16:56:26.000000Z","updated_at":"2025-02-03T18:34:43.000000Z"}  
+[2025-02-03 18:34:43] local.INFO: Quarto pós update  
+[2025-02-03 18:34:43] local.INFO: {"id":2,"customer_id":2,"customer":"Gabriel Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-03T17:20:07.000000Z","updated_at":"2025-02-03T18:33:58.000000Z"}  
+[2025-02-03 18:34:43] local.INFO: Chamou o countActive  
+[2025-02-03 18:34:43] local.INFO: Vai retornar o quarto como vago, quarto: {"id":2,"capacity":"2","price_for_night":34,"busy":0,"number_room":"2","created_at":"2025-02-03T16:56:26.000000Z","updated_at":"2025-02-03T18:34:43.000000Z"}  
+[2025-02-03 18:34:43] local.INFO: Quarto pós update  
+[2025-02-03 18:34:43] local.INFO: {"id":3,"customer_id":1,"customer":"Laura Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-03T18:34:17.000000Z","updated_at":"2025-02-03T18:34:33.000000Z"}  
+[2025-02-03 18:34:43] local.INFO: Chamou o countActive  
+[2025-02-03 18:34:43] local.INFO: Vai retornar o quarto como vago, quarto: {"id":2,"capacity":"2","price_for_night":34,"busy":0,"number_room":"2","created_at":"2025-02-03T16:56:26.000000Z","updated_at":"2025-02-03T18:34:43.000000Z"}  
+[2025-02-03 18:34:43] local.INFO: Quarto pós update  
+[2025-02-03 18:34:43] local.INFO: {"id":4,"customer_id":2,"customer":"Gabriel Refosco","number_room":"2","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-03T18:34:19.000000Z","updated_at":"2025-02-03T18:34:19.000000Z"}  

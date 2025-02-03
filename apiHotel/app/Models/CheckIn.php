@@ -12,7 +12,6 @@ class CheckIn extends Model
         'customer',
         'room_id',
         'number_room',
-        
         'end_period',
     ];
 }

@@ -19,7 +19,7 @@ class Room extends Model
     ];
 
     protected $hidden = [
-        'customer_id',
+        
         'room_id',
     ];
 }
