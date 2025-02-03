@@ -18,6 +18,10 @@ class ProductsController extends Controller
         return $this->productsService->getAll();
     }
 
+    public function search(int $active, string $params, int $id){
+        return $this->productsService->search($active, $params, $id);
+    }
+
     public function store(ProductsRequest $request){
         $data = $request->validated();
         return $this->productsService->store($data);

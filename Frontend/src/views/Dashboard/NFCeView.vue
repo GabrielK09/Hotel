@@ -2,7 +2,7 @@
     <div class="nfce-container">
         <h1 class="title">Emissão NFC-e</h1>
 
-        <!-- Adicionar produto -->>
+        <!-- Adicionar produto -->
         <div class="add-product">
             <label for="product">Produto:</label>
             <input v-model="newProduct" @input="searchProduct" type="text" id="product" placeholder="Search..." />
@@ -15,25 +15,21 @@
                     {{ product.name }} - R$ {{ product.price.toFixed(2) }}
                 </li>
             </ul>
-
-            <label for="price">Preço:</label>
-            <input v-model="newProduct.price" type="number" id="price" placeholder="Preço" />
-
-            <label for="quantity">Quantidade:</label>
-            <input v-model="newProduct.quantity" type="number" id="quantity" placeholder="Quantidade" />
-
             <button @click="addProduct">Adicionar Produto</button>
         </div>
 
-        <!-- Lista de Produtos -->>
+        <!-- Lista de Produtos -->
          <div class="product-list">
             <h2>Produtos Adicionados:</h2>
             <table>
                 <thead>
                     <tr>
                         <th>Produto</th>
+                        <th>CSOSN</th>
                         <th>Quantidade</th>
                         <th>Preço</th>
+                        <th>Desconto</th>
+                        <th>Acréscimo</th>
                         <th>Total</th>
                         <th>Ações</th>
                     </tr>
@@ -41,19 +37,22 @@
                 <tbody>
                     <tr v-for="(product, index) in products" :key="index">
                         <td>{{ product.name }}</td>
-                        <td>{{ Product.quantity }}</td>
+                        <td>{{ product.csosn }}</td>
+                        <td>{{ product.quantity }}</td>
                         <td>R$ {{ product.price.toFixed(2) }}</td>
-                        <td>R$ {{ (product.quantity * product.price).toFixed(2) }}</td>
+                        <td>R$ {{ product.discount.toFixed(2) }}</td>
+                        <td>R$ {{ product.addition.toFixed(2) }}</td>
+                        <td>R$ {{ total.toFixed(2) }}</td>
                         <td><button @click="removeProduct(index)">Remover</button></td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <!-- Resumo da venda -->>
+        <!-- Resumo da venda -->
          <div class="sale-summary">
             <h2>Valores:</h2>
-            <p><strong>Total:</strong> R$ {{ total.toFixed(2) }}</p>
+            <p><strong>Total:</strong> R$ {{ total }}</p>
             <button @click="emitNfce">Emitir NFC-e</button>
          </div>
     </div>
@@ -61,20 +60,59 @@
 
 <script>
 
+import { ref, computed } from 'vue'
+import axios from "axios";
+
+const quantity = ref(1)
+const price = ref(0)
+const discount = ref(0)
+const addition = ref(0)
+const total = computed(() => (quantity.value * price.value) - discount.value + addition.value)
+
 export default {
       data(){
         return {
           newProduct: {
-            price: null,
-            quantity: null,
-            
-          }
+            name: '',
+            csosn: '',
+            price: '',
+            quantity: 1,
+            discount: '',
+            addition: ''
+          },
+          products: []
         }
       },
+
     methods: {
-        async emitNfce() {
-            if (this.products === 0){}
+      addProduct() {
+        if (!this.newProduct.name){
+          alert("Selecione um produto!");
+          return;
         }
+
+        this.products.push({ ...this.newProduct });
+
+        this.newProduct = { name: '', price: 0, quantity: 1, discount: 0, addition: 0, csosn: ''}
+      },
+
+      removeProduct(index) {
+        this.products.splice(index, 1);
+      },
+
+      async emitNfce() {
+        try {
+          const response = await axios.post('http://127.0.0.1:8000/api/nfce/', {
+            quantity: quantity.value,
+            price: price.value,
+            total: total.value
+          })
+
+          console.log('Dados enviados!', response.data)
+        } catch (error) {
+          console.log('Erro ao enviar dados!', error)
+        }
+      }
 
         
     },
@@ -101,7 +139,7 @@ export default {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   max-height: 150px;
   overflow-y: auto;
 }
@@ -110,7 +148,7 @@ export default {
   cursor: pointer;
 }
 .search-results li:hover {
-  background-color: #f0f0f0;
+  background-color: #000000;
 }
 
 table {

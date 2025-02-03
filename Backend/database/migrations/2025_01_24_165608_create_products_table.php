@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('quantidade');
             $table->decimal('preco_custo', 16,2);
             $table->decimal('preco_venda', 16,2);
+            $table->decimal('perc_lucro', 16,2);
             $table->integer('NCM');
             $table->integer('CEST');
             $table->integer('CSOSN');

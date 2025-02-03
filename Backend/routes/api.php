@@ -9,6 +9,10 @@ use App\Http\Controllers\{
     NfceController
 };
 
+Route::get('/teste', function (){
+    return view('NFCeView');
+});
+
 Route::get('/', function () {
     return response()->json(['message' => 'API funcionando!']);
 });
@@ -16,8 +20,9 @@ Route::get('/', function () {
 // products routes
 Route::prefix('products')->group( function(){
 
-    Route::get('/', [ProductsController::class, 'getAll']);
-    Route::post('/', [ProductsController::class, 'store']);
+    Route::get('/all', [ProductsController::class, 'getAll']);
+    Route::get('/search', [ProductsController::class, 'search']);
+    Route::post('/create', [ProductsController::class, 'store']);
     Route::get('/{id}', [ProductsController::class, 'findByID']);
     Route::put('/{id}', [ProductsController::class, 'update']);
     Route::put('/{id}/deactivate', [ProductsController::class, 'delete']);
@@ -27,8 +32,8 @@ Route::prefix('products')->group( function(){
 // Consumer routes
 Route::prefix('consumers')->group( function(){
     
-    Route::get('/', [ConsumerController::class, 'getAll']);
-    Route::post('/', [ConsumerController::class, 'store']);
+    Route::get('/all', [ConsumerController::class, 'getAll']);
+    Route::post('/create', [ConsumerController::class, 'store']);
     Route::get('/{id}', [ConsumerController::class, 'findByID']);
     Route::put('/{id}', [ConsumerController::class, 'update']);
     Route::delete('/{id}/deactivate', [ConsumerController::class, 'delete']);
@@ -38,8 +43,8 @@ Route::prefix('consumers')->group( function(){
 // CashRegister routes
 Route::prefix('cashRegister')->group( function(){
 
-    Route::get('/', [CashRegisterController::class, 'getAll']);
-    Route::post('/', [CashRegisterController::class, 'store']);
+    Route::get('/all', [CashRegisterController::class, 'getAll']);
+    Route::post('/create', [CashRegisterController::class, 'store']);
     Route::get('/{id}', [CashRegisterController::class, 'findByID']);
     Route::put('/{id}', [CashRegisterController::class, 'update']);
     Route::delete('/{id}/deactivate', [CashRegisterController::class, 'delete']);
@@ -49,8 +54,8 @@ Route::prefix('cashRegister')->group( function(){
 // User routes
 Route::prefix('users')->group( function(){
 
-    Route::get('/', [UserController::class, 'getAll']);
-    Route::post('/', [UserController::class, 'store']);
+    Route::get('/all', [UserController::class, 'getAll']);
+    Route::post('/create', [UserController::class, 'store']);
     Route::get('/{id}', [UserController::class, 'findByID']);
     Route::put('/{id}', [UserController::class, 'update']);
     Route::delete('/{id}/deactivate', [UserController::class, 'delete']);
@@ -60,8 +65,8 @@ Route::prefix('users')->group( function(){
 // NFC-e routes
 Route::prefix('nfce')->group( function(){
     
-    Route::get('/', [NfceController::class, 'getAll']);
-    Route::post('/', [NfceController::class, 'store']);
+    Route::get('/all', [NfceController::class, 'getAll']);
+    Route::post('/create', [NfceController::class, 'store']);
     Route::get('/{id}', [NfceController::class, 'findByID']);
     Route::put('/{id}', [NfceController::class, 'update']);
     Route::delete('/{id}/deactivate', [NfceController::class, 'delete']);

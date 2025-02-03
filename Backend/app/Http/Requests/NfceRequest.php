@@ -24,11 +24,10 @@ class NfceRequest extends FormRequest
         $required = $this->isMethod('post') ? 'required' : 'sometimes';
 
         return [
-            'descricao' => "$required|string|max:255",
             'preco_bruto' => "$required|numeric|min:0",
             'preco_liquido' => "$required|numeric|min:0",
-            'preco_desconto',
-            'forma_pagamento',
+            'preco_desconto' => "nullable|numeric|min:0",
+            'forma_pagamento' => "$required|string",
         ];
     }
 }

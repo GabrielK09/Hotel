@@ -21,6 +21,14 @@ class ProductsService{
         }
     }
 
+    public function search(int $active, string $params, int $id){
+        try {
+            return $this->productsRepository->search($active, $params, $id);
+        } catch (\Throwable $th) {
+            return $this->returnResponse($th);
+        }
+    }
+
     public function findByID(int $id){
         try {
             return response()->json([
