@@ -175,17 +175,5 @@ class RoomRepository implements RoomContract
         
     }
 
-    public function calculo(){
-        $carrinho = [];
-        $total = 0;
-
-        foreach ($carrinho as $produto) {
-            $total += $produto->valor_venda;
-
-        }
-        
-        return $total;
-
-    }
 
 }
