@@ -13,7 +13,7 @@
       />
       <ul v-if="searchResults.length" class="search-results">
         <li v-for="product in searchResults" :key="product.id" @click="selectProduct(product)">
-          {{ product.name }} - R$ {{ product.price.toFixed(2) }}
+          {{ product.name }} - R$ {{ product.price }}
         </li>
       </ul>
     </div>
