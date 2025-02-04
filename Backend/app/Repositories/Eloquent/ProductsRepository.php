@@ -11,10 +11,13 @@ class ProductsRepository
     }
 
     public function search(int $active, string $params, int $id){
-        return Products::where('name', 'like', '%' . $params . '%')
-                        ->orWhere('id', $id)
-                        ->where('active', $active)
-                        ->get();
+        return Products::where('active', $active)
+                       ->where(function ($query) use ($params, $id) {
+                           $query->where('name', 'like', '%' . $params . '%')
+                                 ->orWhere('id', $id);
+                       })
+                       ->limit(10)
+                       ->get();
     }
 
     public function findByID(int $id){

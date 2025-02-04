@@ -4,7 +4,6 @@ import LoginView from '@/views/Auth/LoginView.vue'
 import RegisterView from '@/views/Auth/RegisterView.vue'
 import SettingsView from '@/views/Dashboard/SettingsView.vue'
 import ConsumersView from '../views/Dashboard/ConsumersView.vue'
-import ConsumerForm from '../views/Components/ConsumerForm.vue'
 import NFCeView from '../views/Dashboard/NFCeView.vue'
 import AboutView from '@/views/AboutView.vue'
 
@@ -33,11 +32,6 @@ const routes = [
     path: '/consumers',
     name: 'consumers',
     component: ConsumersView,
-  },
-  {
-    path: '/consumer/form',
-    name: 'consumer-form',
-    component: ConsumerForm,
   },
   {
     path: '/nfce',
