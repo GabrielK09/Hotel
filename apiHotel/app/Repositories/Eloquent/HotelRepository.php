@@ -14,7 +14,7 @@ class HotelRepository implements HotelDetailContract
 {
     public function all(int $active)
     {
-        return HotelDetail::where('active', $active)->get();
+        return HotelDetail::where('active', $active)->first();
 
     }
 

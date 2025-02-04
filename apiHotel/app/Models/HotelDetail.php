@@ -16,6 +16,7 @@ class HotelDetail extends Model
         'name',
         'cnpj',
         'email',
+        'cep', 
         'address',
         'number',
         'number_of_rooms',
