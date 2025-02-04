@@ -86,7 +86,7 @@ class RoomService
             return response()->json([
                 'success' => true,
                 'message' => 'Check-in bem sucedido!',
-                'total' => $this->roomRepository->checkIn($data)
+                'chek-in' => $this->roomRepository->checkIn($data)
 
             ]);
         } catch (\Throwable $th) {

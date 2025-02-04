@@ -117,9 +117,11 @@ class RoomRepository implements RoomContract
                 
                 Log::info("Quarto pós update");
                 Log::info($room);
+                
             }
         }
         
+        return $room;
     }
 
     public function countActive(object $room, int $room_id)
