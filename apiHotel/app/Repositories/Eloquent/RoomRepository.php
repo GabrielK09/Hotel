@@ -6,7 +6,6 @@ use App\Models\{
     DetailRooms,
     HotelDetail,
     Room,
-    CheckIn,
     Capacity
 };
 
@@ -88,16 +87,6 @@ class RoomRepository implements RoomContract
                 'active' => 0
 
             ]);
-
-            /*
-            CheckIn::create([
-                'customer_id' => $data['customer_id'],
-                'customer' => $customer->name,
-                'room_id' => $data['room_id'],
-                'number_room' => $rooms->number_room,
-                'end_period' => $data['end_period']
-
-            ]); */
 
             $detailRooms->update([
                 'capacity' => $capacity->capacity - 1

@@ -66,7 +66,6 @@ class RoomService
     public function find(string $param)
     {
         try {
-            //return response()->json( $this->roomRepository->find($param));
             return $this->roomRepository->find($param);
             
         } catch (\Throwable $th) {
