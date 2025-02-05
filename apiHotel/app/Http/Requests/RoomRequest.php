@@ -36,11 +36,18 @@ class RoomRequest extends FormRequest
                 if(
                     $detailRoom->exists() &&
                     $detailRoom->busy == 1 &&
-                    $detailRoom->capacity == 0
+                    $detailRoom->capacity > 0
                     
                 )
                 {
-                    $fail("Esse quarto já estáo ocupado ou cheio");
+                    $fail("Esse quarto já estáo ocupado");
+
+                } elseif (
+                    $detailRoom->exists() &&
+                    $detailRoom->busy == 1 &&
+                    $detailRoom->capacity <= 0
+                ){
+                    $fail("Esse quarto já estáo cheio");
 
                 }
             }],
