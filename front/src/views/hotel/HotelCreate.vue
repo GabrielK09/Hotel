@@ -95,10 +95,9 @@ import axios from 'axios';
                     {
                         const response = await axios.get(`https://viacep.com.br/ws/${this.form.cep}/json/`)
                         
-                        console.log(response.data)
                         this.form.address = response.data.logradouro
+
                     }
-                    
 
                 } catch (error) {
                     console.error("Erro", error)

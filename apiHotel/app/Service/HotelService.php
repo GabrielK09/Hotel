@@ -16,6 +16,7 @@ class HotelService
     public function all(int $active)
     {
         try {
+            
             return response()->json([
                 'success' => true,
                 'all' => $this->hotelRepository->all($active)

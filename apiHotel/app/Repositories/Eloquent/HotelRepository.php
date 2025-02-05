@@ -14,8 +14,49 @@ class HotelRepository implements HotelDetailContract
 {
     public function all(int $active)
     {
-        return HotelDetail::where('active', $active)->first();
+        //return HotelDetail::where('active', $active)->first();
+        $hotel = HotelDetail::where('active', $active)->first();
+        return $hotel;
+        //return $this->checkAddress($hotel);
+    
+    }
 
+    public function checkAddress(object $hotel)
+    {
+        $ch = curl_init();
+
+        curl_setopt_array($ch, [
+            CURLOPT_URL => "https://viacep.com.br/ws/$hotel->cep/json/",
+            CURLOPT_RETURNTRANSFER => true, 
+            CURLOPT_TIMEOUT => 10,
+            CURLOPT_SSL_VERIFYPEER => false
+
+        ]);
+
+        $data = curl_exec($ch);
+
+        if(curl_errno($ch))
+        {
+            return "Erro CURL: \n" . curl_error($ch) . " rota: https://viacep.com.br/ws/$hotel->cep/json/";
+
+        }
+
+        $response = json_decode($data, true);
+        curl_close($ch);
+
+        if($hotel->address != $response['logradouro'])
+        {
+            $hotel->update([
+                'address' => $response['logradouro']
+            ]);
+
+            $hotel->save();
+
+            return $hotel;
+
+        }
+
+        return $hotel;
     }
 
     public function create(array $data)

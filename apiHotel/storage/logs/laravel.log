@@ -1,73 +1,4 @@
-[2025-02-04 02:05:37] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
-[2025-02-04 02:05:37] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
-[2025-02-04 02:05:38] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
-[2025-02-04 02:05:49] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
-[2025-02-04 02:05:50] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
-[2025-02-04 02:09:15] local.INFO: Vai procurar o quarto pelo número dele e se está ativo ou inativo  
-[2025-02-04 02:09:15] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
-[2025-02-04 02:09:15] local.INFO: Dados de entrada:1  
-[2025-02-04 02:09:15] local.INFO: Quarto encontrado: 
-[{"id":1,"customer_id":1,"customer":"Laura Refosco","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-04T02:05:37.000000Z","updated_at":"2025-02-04T02:05:37.000000Z"},{"id":2,"customer_id":3,"customer":"Jo\u00e3o Lodi","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-04T02:05:37.000000Z","updated_at":"2025-02-04T02:05:37.000000Z"},{"id":3,"customer_id":4,"customer":"Jo\u00e3o Lodi","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-04T02:05:38.000000Z","updated_at":"2025-02-04T02:05:38.000000Z"},{"id":4,"customer_id":2,"customer":"Gabriel Refosco","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-04T02:05:49.000000Z","updated_at":"2025-02-04T02:05:49.000000Z"}]  
-[2025-02-04 02:09:15] local.INFO: Vai zerar os clientes  
-[2025-02-04 02:09:15] local.INFO: Vai colocar a capacidade do quarto - 1  
-[2025-02-04 02:09:15] local.INFO: {"id":1,"capacity":3,"price_for_night":30,"busy":1,"number_room":"1","created_at":"2025-02-04T02:04:42.000000Z","updated_at":"2025-02-04T02:09:15.000000Z"}  
-[2025-02-04 02:09:15] local.INFO: Vai calcular o count->active  
-[2025-02-04 02:09:15] local.INFO: Chamou o countActive  
-[2025-02-04 02:09:15] local.INFO: Chamou o countActive  
-[2025-02-04 02:09:15] local.INFO: Chamou o countActive  
-[2025-02-04 02:09:15] local.INFO: Chamou o countActive  
-[2025-02-04 02:09:53] local.INFO: Vai procurar o quarto pelo número dele e se está ativo ou inativo  
-[2025-02-04 02:09:53] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
-[2025-02-04 02:09:53] local.INFO: Dados de entrada:1  
-[2025-02-04 02:09:53] local.INFO: Quarto encontrado: 
-[{"id":1,"customer_id":1,"customer":"Laura Refosco","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-04T02:05:37.000000Z","updated_at":"2025-02-04T02:09:15.000000Z"},{"id":2,"customer_id":3,"customer":"Jo\u00e3o Lodi","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-04T02:05:37.000000Z","updated_at":"2025-02-04T02:05:37.000000Z"},{"id":3,"customer_id":4,"customer":"Jo\u00e3o Lodi","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-04T02:05:38.000000Z","updated_at":"2025-02-04T02:05:38.000000Z"},{"id":4,"customer_id":2,"customer":"Gabriel Refosco","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-04T02:05:49.000000Z","updated_at":"2025-02-04T02:05:49.000000Z"}]  
-[2025-02-04 02:09:53] local.INFO: Vai zerar os clientes  
-[2025-02-04 02:09:53] local.INFO: Vai colocar a capacidade do quarto - 1  
-[2025-02-04 02:09:53] local.INFO: {"id":1,"capacity":3,"price_for_night":30,"busy":1,"number_room":"1","created_at":"2025-02-04T02:04:42.000000Z","updated_at":"2025-02-04T02:09:15.000000Z"}  
-[2025-02-04 02:09:53] local.INFO: Vai calcular o count->active  
-[2025-02-04 02:09:53] local.INFO: Chamou o countActive  
-[2025-02-04 02:09:53] local.INFO: Chamou o countActive  
-[2025-02-04 02:09:53] local.INFO: Chamou o countActive  
-[2025-02-04 02:09:53] local.INFO: Chamou o countActive  
-[2025-02-04 02:10:05] local.INFO: Vai procurar o quarto pelo número dele e se está ativo ou inativo  
-[2025-02-04 02:10:05] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
-[2025-02-04 02:10:05] local.INFO: Dados de entrada:1  
-[2025-02-04 02:10:05] local.INFO: Quarto encontrado: 
-[{"id":1,"customer_id":1,"customer":"Laura Refosco","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-04T02:05:37.000000Z","updated_at":"2025-02-04T02:09:15.000000Z"},{"id":2,"customer_id":3,"customer":"Jo\u00e3o Lodi","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-04T02:05:37.000000Z","updated_at":"2025-02-04T02:05:37.000000Z"},{"id":3,"customer_id":4,"customer":"Jo\u00e3o Lodi","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-04T02:05:38.000000Z","updated_at":"2025-02-04T02:05:38.000000Z"},{"id":4,"customer_id":2,"customer":"Gabriel Refosco","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-04T02:05:49.000000Z","updated_at":"2025-02-04T02:09:53.000000Z"}]  
-[2025-02-04 02:10:05] local.INFO: Vai zerar os clientes  
-[2025-02-04 02:10:05] local.INFO: Vai colocar a capacidade do quarto - 1  
-[2025-02-04 02:10:05] local.INFO: {"id":1,"capacity":3,"price_for_night":30,"busy":1,"number_room":"1","created_at":"2025-02-04T02:04:42.000000Z","updated_at":"2025-02-04T02:09:15.000000Z"}  
-[2025-02-04 02:10:05] local.INFO: Vai calcular o count->active  
-[2025-02-04 02:10:05] local.INFO: Chamou o countActive  
-[2025-02-04 02:10:05] local.INFO: Chamou o countActive  
-[2025-02-04 02:10:05] local.INFO: Chamou o countActive  
-[2025-02-04 02:10:05] local.INFO: Chamou o countActive  
-[2025-02-04 02:10:09] local.INFO: Vai procurar o quarto pelo número dele e se está ativo ou inativo  
-[2025-02-04 02:10:09] local.INFO: Vai procurar o quarto pelo cliente e se está ativo  
-[2025-02-04 02:10:09] local.INFO: Dados de entrada:1  
-[2025-02-04 02:10:09] local.INFO: Quarto encontrado: 
-[{"id":1,"customer_id":1,"customer":"Laura Refosco","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-04T02:05:37.000000Z","updated_at":"2025-02-04T02:09:15.000000Z"},{"id":2,"customer_id":3,"customer":"Jo\u00e3o Lodi","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-04T02:05:37.000000Z","updated_at":"2025-02-04T02:10:05.000000Z"},{"id":3,"customer_id":4,"customer":"Jo\u00e3o Lodi","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-04T02:05:38.000000Z","updated_at":"2025-02-04T02:05:38.000000Z"},{"id":4,"customer_id":2,"customer":"Gabriel Refosco","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-04T02:05:49.000000Z","updated_at":"2025-02-04T02:09:53.000000Z"}]  
-[2025-02-04 02:10:09] local.INFO: Vai zerar os clientes  
-[2025-02-04 02:10:09] local.INFO: Vai colocar a capacidade do quarto - 1  
-[2025-02-04 02:10:09] local.INFO: {"id":1,"capacity":3,"price_for_night":30,"busy":1,"number_room":"1","created_at":"2025-02-04T02:04:42.000000Z","updated_at":"2025-02-04T02:09:15.000000Z"}  
-[2025-02-04 02:10:09] local.INFO: Vai calcular o count->active  
-[2025-02-04 02:10:09] local.INFO: Chamou o countActive  
-[2025-02-04 02:10:09] local.INFO: Vai retornar o quarto como vago, quarto: {"id":1,"capacity":3,"price_for_night":30,"busy":1,"number_room":"1","created_at":"2025-02-04T02:04:42.000000Z","updated_at":"2025-02-04T02:09:15.000000Z"}  
-[2025-02-04 02:10:09] local.INFO: Quarto pós update  
-[2025-02-04 02:10:09] local.INFO: {"id":1,"customer_id":1,"customer":"Laura Refosco","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-04T02:05:37.000000Z","updated_at":"2025-02-04T02:09:15.000000Z"}  
-[2025-02-04 02:10:09] local.INFO: Chamou o countActive  
-[2025-02-04 02:10:09] local.INFO: Vai retornar o quarto como vago, quarto: {"id":1,"capacity":"4","price_for_night":30,"busy":0,"number_room":"1","created_at":"2025-02-04T02:04:42.000000Z","updated_at":"2025-02-04T02:10:09.000000Z"}  
-[2025-02-04 02:10:09] local.INFO: Quarto pós update  
-[2025-02-04 02:10:09] local.INFO: {"id":2,"customer_id":3,"customer":"Jo\u00e3o Lodi","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-04T02:05:37.000000Z","updated_at":"2025-02-04T02:10:05.000000Z"}  
-[2025-02-04 02:10:09] local.INFO: Chamou o countActive  
-[2025-02-04 02:10:09] local.INFO: Vai retornar o quarto como vago, quarto: {"id":1,"capacity":"4","price_for_night":30,"busy":0,"number_room":"1","created_at":"2025-02-04T02:04:42.000000Z","updated_at":"2025-02-04T02:10:09.000000Z"}  
-[2025-02-04 02:10:09] local.INFO: Quarto pós update  
-[2025-02-04 02:10:09] local.INFO: {"id":3,"customer_id":4,"customer":"Jo\u00e3o Lodi","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":1,"created_at":"2025-02-04T02:05:38.000000Z","updated_at":"2025-02-04T02:05:38.000000Z"}  
-[2025-02-04 02:10:09] local.INFO: Chamou o countActive  
-[2025-02-04 02:10:09] local.INFO: Vai retornar o quarto como vago, quarto: {"id":1,"capacity":"4","price_for_night":30,"busy":0,"number_room":"1","created_at":"2025-02-04T02:04:42.000000Z","updated_at":"2025-02-04T02:10:09.000000Z"}  
-[2025-02-04 02:10:09] local.INFO: Quarto pós update  
-[2025-02-04 02:10:09] local.INFO: {"id":4,"customer_id":2,"customer":"Gabriel Refosco","number_room":"1","start_period":"2023-01-30","end_period":"2024-01-30","active":0,"created_at":"2025-02-04T02:05:49.000000Z","updated_at":"2025-02-04T02:09:53.000000Z"}  
-[2025-02-04 16:24:15] local.ERROR: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'id' (Connection: mariadb, SQL: alter table `hotel_details` add `id` bigint unsigned not null auto_increment primary key) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S21): SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'id' (Connection: mariadb, SQL: alter table `hotel_details` add `id` bigint unsigned not null auto_increment primary key) at C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:825)
+[2025-02-05 16:53:20] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'customer_id' doesn't exist in table (Connection: mariadb, SQL: alter table `pay_ment_methods` add constraint `pay_ment_methods_customer_id_foreign` foreign key (`customer_id`) references `customers` (`id`) on delete cascade) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'customer_id' doesn't exist in table (Connection: mariadb, SQL: alter table `pay_ment_methods` add constraint `pay_ment_methods_customer_id_foreign` foreign key (`customer_id`) references `customers` (`id`) on delete cascade) at C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:825)
 [stacktrace]
 #0 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(779): Illuminate\\Database\\Connection->runQueryCallback()
 #1 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(560): Illuminate\\Database\\Connection->run()
@@ -75,7 +6,7 @@
 #3 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(564): Illuminate\\Database\\Schema\\Blueprint->build()
 #4 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(406): Illuminate\\Database\\Schema\\Builder->build()
 #5 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Database\\Schema\\Builder->table()
-#6 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\database\\migrations\\2025_01_27_213410_create_hotel_details_table copy.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#6 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\database\\migrations\\2025_02_05_001328_create_pay_ment_methods_table copy.php(11): Illuminate\\Support\\Facades\\Facade::__callStatic()
 #7 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(476): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
 #8 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(401): Illuminate\\Database\\Migrations\\Migrator->runMethod()
 #9 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
@@ -105,7 +36,7 @@
 #33 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\artisan(13): Illuminate\\Foundation\\Application->handleCommand()
 #34 {main}
 
-[previous exception] [object] (PDOException(code: 42S21): SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'id' at C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:571)
+[previous exception] [object] (PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'customer_id' doesn't exist in table at C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:571)
 [stacktrace]
 #0 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(571): PDOStatement->execute()
 #1 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(812): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
@@ -115,163 +46,7 @@
 #5 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(564): Illuminate\\Database\\Schema\\Blueprint->build()
 #6 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(406): Illuminate\\Database\\Schema\\Builder->build()
 #7 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Database\\Schema\\Builder->table()
-#8 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\database\\migrations\\2025_01_27_213410_create_hotel_details_table copy.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic()
-#9 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(476): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
-#10 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(401): Illuminate\\Database\\Migrations\\Migrator->runMethod()
-#11 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
-#12 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(213): Illuminate\\Database\\Migrations\\Migrator->runMigration()
-#13 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(40): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
-#14 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(737): Illuminate\\Console\\View\\Components\\Task->render()
-#15 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(213): Illuminate\\Database\\Migrations\\Migrator->write()
-#16 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(180): Illuminate\\Database\\Migrations\\Migrator->runUp()
-#17 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(123): Illuminate\\Database\\Migrations\\Migrator->runPending()
-#18 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(116): Illuminate\\Database\\Migrations\\Migrator->run()
-#19 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(616): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
-#20 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(109): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
-#21 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(88): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->runMigrations()
-#22 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
-#23 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
-#24 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure()
-#25 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
-#26 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(694): Illuminate\\Container\\BoundMethod::call()
-#27 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(213): Illuminate\\Container\\Container->call()
-#28 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Command\\Command.php(279): Illuminate\\Console\\Command->execute()
-#29 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
-#30 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Application.php(1094): Illuminate\\Console\\Command->run()
-#31 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand()
-#32 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Application.php(193): Symfony\\Component\\Console\\Application->doRun()
-#33 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(198): Symfony\\Component\\Console\\Application->run()
-#34 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1208): Illuminate\\Foundation\\Console\\Kernel->handle()
-#35 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\artisan(13): Illuminate\\Foundation\\Application->handleCommand()
-#36 {main}
-"} 
-[2025-02-04 16:24:25] local.ERROR: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'created_at' (Connection: mariadb, SQL: alter table `hotel_details` add `created_at` timestamp null) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S21): SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'created_at' (Connection: mariadb, SQL: alter table `hotel_details` add `created_at` timestamp null) at C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:825)
-[stacktrace]
-#0 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(779): Illuminate\\Database\\Connection->runQueryCallback()
-#1 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(560): Illuminate\\Database\\Connection->run()
-#2 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(118): Illuminate\\Database\\Connection->statement()
-#3 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(564): Illuminate\\Database\\Schema\\Blueprint->build()
-#4 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(406): Illuminate\\Database\\Schema\\Builder->build()
-#5 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Database\\Schema\\Builder->table()
-#6 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\database\\migrations\\2025_01_27_213410_create_hotel_details_table copy.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic()
-#7 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(476): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
-#8 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(401): Illuminate\\Database\\Migrations\\Migrator->runMethod()
-#9 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
-#10 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(213): Illuminate\\Database\\Migrations\\Migrator->runMigration()
-#11 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(40): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
-#12 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(737): Illuminate\\Console\\View\\Components\\Task->render()
-#13 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(213): Illuminate\\Database\\Migrations\\Migrator->write()
-#14 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(180): Illuminate\\Database\\Migrations\\Migrator->runUp()
-#15 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(123): Illuminate\\Database\\Migrations\\Migrator->runPending()
-#16 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(116): Illuminate\\Database\\Migrations\\Migrator->run()
-#17 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(616): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
-#18 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(109): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
-#19 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(88): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->runMigrations()
-#20 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
-#21 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
-#22 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure()
-#23 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
-#24 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(694): Illuminate\\Container\\BoundMethod::call()
-#25 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(213): Illuminate\\Container\\Container->call()
-#26 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Command\\Command.php(279): Illuminate\\Console\\Command->execute()
-#27 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
-#28 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Application.php(1094): Illuminate\\Console\\Command->run()
-#29 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand()
-#30 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Application.php(193): Symfony\\Component\\Console\\Application->doRun()
-#31 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(198): Symfony\\Component\\Console\\Application->run()
-#32 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1208): Illuminate\\Foundation\\Console\\Kernel->handle()
-#33 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\artisan(13): Illuminate\\Foundation\\Application->handleCommand()
-#34 {main}
-
-[previous exception] [object] (PDOException(code: 42S21): SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'created_at' at C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:571)
-[stacktrace]
-#0 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(571): PDOStatement->execute()
-#1 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(812): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
-#2 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(779): Illuminate\\Database\\Connection->runQueryCallback()
-#3 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(560): Illuminate\\Database\\Connection->run()
-#4 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(118): Illuminate\\Database\\Connection->statement()
-#5 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(564): Illuminate\\Database\\Schema\\Blueprint->build()
-#6 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(406): Illuminate\\Database\\Schema\\Builder->build()
-#7 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Database\\Schema\\Builder->table()
-#8 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\database\\migrations\\2025_01_27_213410_create_hotel_details_table copy.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic()
-#9 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(476): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
-#10 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(401): Illuminate\\Database\\Migrations\\Migrator->runMethod()
-#11 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
-#12 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(213): Illuminate\\Database\\Migrations\\Migrator->runMigration()
-#13 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(40): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
-#14 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(737): Illuminate\\Console\\View\\Components\\Task->render()
-#15 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(213): Illuminate\\Database\\Migrations\\Migrator->write()
-#16 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(180): Illuminate\\Database\\Migrations\\Migrator->runUp()
-#17 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(123): Illuminate\\Database\\Migrations\\Migrator->runPending()
-#18 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(116): Illuminate\\Database\\Migrations\\Migrator->run()
-#19 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(616): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
-#20 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(109): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
-#21 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(88): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->runMigrations()
-#22 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
-#23 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
-#24 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure()
-#25 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
-#26 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(694): Illuminate\\Container\\BoundMethod::call()
-#27 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(213): Illuminate\\Container\\Container->call()
-#28 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Command\\Command.php(279): Illuminate\\Console\\Command->execute()
-#29 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
-#30 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Application.php(1094): Illuminate\\Console\\Command->run()
-#31 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand()
-#32 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Application.php(193): Symfony\\Component\\Console\\Application->doRun()
-#33 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(198): Symfony\\Component\\Console\\Application->run()
-#34 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1208): Illuminate\\Foundation\\Console\\Kernel->handle()
-#35 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\artisan(13): Illuminate\\Foundation\\Application->handleCommand()
-#36 {main}
-"} 
-[2025-02-04 16:24:31] local.ERROR: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'cep' (Connection: mariadb, SQL: alter table `hotel_details` add `cep` varchar(8) not null) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S21): SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'cep' (Connection: mariadb, SQL: alter table `hotel_details` add `cep` varchar(8) not null) at C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:825)
-[stacktrace]
-#0 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(779): Illuminate\\Database\\Connection->runQueryCallback()
-#1 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(560): Illuminate\\Database\\Connection->run()
-#2 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(118): Illuminate\\Database\\Connection->statement()
-#3 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(564): Illuminate\\Database\\Schema\\Blueprint->build()
-#4 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(406): Illuminate\\Database\\Schema\\Builder->build()
-#5 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Database\\Schema\\Builder->table()
-#6 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\database\\migrations\\2025_01_27_213410_create_hotel_details_table copy.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic()
-#7 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(476): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
-#8 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(401): Illuminate\\Database\\Migrations\\Migrator->runMethod()
-#9 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
-#10 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(213): Illuminate\\Database\\Migrations\\Migrator->runMigration()
-#11 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\View\\Components\\Task.php(40): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
-#12 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(737): Illuminate\\Console\\View\\Components\\Task->render()
-#13 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(213): Illuminate\\Database\\Migrations\\Migrator->write()
-#14 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(180): Illuminate\\Database\\Migrations\\Migrator->runUp()
-#15 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(123): Illuminate\\Database\\Migrations\\Migrator->runPending()
-#16 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(116): Illuminate\\Database\\Migrations\\Migrator->run()
-#17 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(616): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
-#18 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(109): Illuminate\\Database\\Migrations\\Migrator->usingConnection()
-#19 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(88): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->runMigrations()
-#20 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
-#21 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
-#22 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure()
-#23 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
-#24 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(694): Illuminate\\Container\\BoundMethod::call()
-#25 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(213): Illuminate\\Container\\Container->call()
-#26 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Command\\Command.php(279): Illuminate\\Console\\Command->execute()
-#27 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
-#28 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Application.php(1094): Illuminate\\Console\\Command->run()
-#29 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Application.php(342): Symfony\\Component\\Console\\Application->doRunCommand()
-#30 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\symfony\\console\\Application.php(193): Symfony\\Component\\Console\\Application->doRun()
-#31 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(198): Symfony\\Component\\Console\\Application->run()
-#32 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1208): Illuminate\\Foundation\\Console\\Kernel->handle()
-#33 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\artisan(13): Illuminate\\Foundation\\Application->handleCommand()
-#34 {main}
-
-[previous exception] [object] (PDOException(code: 42S21): SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'cep' at C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:571)
-[stacktrace]
-#0 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(571): PDOStatement->execute()
-#1 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(812): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
-#2 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(779): Illuminate\\Database\\Connection->runQueryCallback()
-#3 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(560): Illuminate\\Database\\Connection->run()
-#4 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(118): Illuminate\\Database\\Connection->statement()
-#5 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(564): Illuminate\\Database\\Schema\\Blueprint->build()
-#6 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(406): Illuminate\\Database\\Schema\\Builder->build()
-#7 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(361): Illuminate\\Database\\Schema\\Builder->table()
-#8 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\database\\migrations\\2025_01_27_213410_create_hotel_details_table copy.php(14): Illuminate\\Support\\Facades\\Facade::__callStatic()
+#8 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\database\\migrations\\2025_02_05_001328_create_pay_ment_methods_table copy.php(11): Illuminate\\Support\\Facades\\Facade::__callStatic()
 #9 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(476): Illuminate\\Database\\Migrations\\Migration@anonymous->up()
 #10 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(401): Illuminate\\Database\\Migrations\\Migrator->runMethod()
 #11 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(410): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()

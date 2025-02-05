@@ -6,22 +6,21 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('pay_ment_methods', function (Blueprint $table) {
             $table->id();
-
-            $table->float('payment_method', 10, 2);
+            $table->string('payment_method', 100);
+            $table->float('amount_paid', 10, 2);
+            $table->unsignedBigInteger('customer_id');
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->string('customer', 120); 
+            $table->date('payment_period');
             $table->timestamps();
+
         });
     }
-
-    /**
-     * Reverse the migrations.
-     */
+    
     public function down(): void
     {
         Schema::dropIfExists('pay_ment_methods');

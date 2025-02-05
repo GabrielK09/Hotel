@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('hotel_details', function (Blueprint $table) {
-            $table->boolean('reserved', 1)->default(0);
-            
+            $table->string('cep', 8)->unique();
         });
     }
 
@@ -22,6 +21,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('hotel_details');
+        
     }
 };

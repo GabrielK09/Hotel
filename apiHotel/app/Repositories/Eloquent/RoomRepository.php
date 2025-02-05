@@ -16,6 +16,7 @@ class RoomRepository implements RoomContract
 {
     public function all(int $active)
     {
+        Log::info("Vai buscar todos os quartos do hotel table = Rooms");
         return Room::all();
 
     }
@@ -75,7 +76,8 @@ class RoomRepository implements RoomContract
         $capacity = Capacity::where('id', $data['room_id'])->first(); // Pega a quantia anterior
         $rooms = $this->findByRoomID($data['room_id']);
         $customer = $this->findByCustomerID($data['customer_id']);
-        $detailRooms = DetailRooms::where('id', $data['room_id'])->first();
+        //$detailRooms = DetailRooms::where('id', $data['room_id'])->first();
+        $detailRooms = $this->find($data['room_id']);
         
         Log::info('Dados de entrada:' . $data['room_id']);
         Log::info("Quarto encontrado: \n$rooms");
@@ -144,7 +146,7 @@ class RoomRepository implements RoomContract
 
     public function findByRoomID(string $id)
     {
-        Log::info("Vai procurar o quarto pelo número dele e se está ativo ou inativo");
+        Log::info("Vai procurar o quarto pelo número dele");
         return Room::where('room_id', $id)
                         ->get();
 
