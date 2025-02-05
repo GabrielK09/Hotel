@@ -158,13 +158,15 @@ class RoomRepository implements RoomContract
 
     public function update(array $data, int $id)
     {
-        
+        return DetailRooms::where('id', $id)->update($data);
+
     }
 
     public function delete(int $id)
     {
-        
+        return DetailRooms::where('id', $id)->update([
+            'active' => 0
+        ]);
+        // Desativa o quarto
     }
-
-
 }

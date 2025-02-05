@@ -25,6 +25,7 @@ class HotelDetailRequest extends FormRequest
             'name' => [$required, 'string', 'max:120'],
             'cnpj' => [$required, 'string', 'max:14'],
             'email' => [$required, 'string', 'max:170'],
+            'cep' => [$required, 'string', 'max:8'],
             'address' => [$required, 'string', 'max:120'],
             'number' => [$required],
             'number_of_rooms' => [$required],
@@ -48,6 +49,9 @@ class HotelDetailRequest extends FormRequest
             'email.required' => 'O campo email é obrigátorio',
             'email.max' => 'O campo email passou do seu limite: :max caracteres',
             'email.string' => 'O campo email deve ser texto válido',
+
+            'cnpj.required' => 'O campo CEP é obrigátorio',
+            'cnpj.string' => 'O campo CEP deve ser texto válido',
 
             'address.required' => 'O campo endereço é obrigátorio',
             'address.max' => 'O campo endereço passou do seu limite: :max caracteres',
