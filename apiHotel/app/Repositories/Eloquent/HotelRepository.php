@@ -9,6 +9,7 @@ use App\Models\{
 };
 
 use App\Repositories\Interface\HotelDetailContract;
+use Illuminate\Support\Facades\Log;
 
 class HotelRepository implements HotelDetailContract
 {
@@ -23,6 +24,7 @@ class HotelRepository implements HotelDetailContract
 
     public function checkAddress(object $hotel)
     {
+        Log::info('Vai iniciar a consulta do CEP');
         $ch = curl_init();
 
         curl_setopt_array($ch, [
@@ -37,15 +39,18 @@ class HotelRepository implements HotelDetailContract
 
         if(curl_errno($ch))
         {
+            Log::info('Erro ao fazer a consulta: ' . curl_error($ch));
             return "Erro CURL: \n" . curl_error($ch) . " rota: https://viacep.com.br/ws/$hotel->cep/json/";
 
         }
 
         $response = json_decode($data, true);
         curl_close($ch);
+        Log::info('Terminou e encerrou a consulta, vai comparar o endereço do CEP');
 
         if($hotel->address != $response['logradouro'])
         {
+            Log::info('Vai fazer a alteração');            
             $hotel->update([
                 'address' => $response['logradouro']
             ]);
@@ -54,9 +59,12 @@ class HotelRepository implements HotelDetailContract
 
             return $hotel;
 
+            Log::info('Fim do bloco, linha 62');
         }
 
         return $hotel;
+        Log::info('Não vai alterar o endereço');
+        Log::info('Fim do bloco, linha 66');
     }
 
     public function create(array $data)

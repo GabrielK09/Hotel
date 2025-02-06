@@ -3,6 +3,7 @@
 use App\Http\Controllers\{
     CustomerController,
     HotelController,
+    PayMentController,
     RoomController
     
 };
@@ -33,6 +34,11 @@ Route::prefix('v1')->group( function (){
         Route::get('/rooms', [RoomController::class, 'allRooms']);
         Route::post('/room', [RoomController::class, 'create']);
         Route::put('/check-in', [RoomController::class, 'checkIn']);
+
+    });
+
+    Route::prefix('pay-ment')->group(function (){
+        Route::get('/index', [PayMentController::class, 'index']);
 
     });
 });
