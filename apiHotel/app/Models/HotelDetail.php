@@ -22,7 +22,8 @@ class HotelDetail extends Model
         'number_of_rooms',
         'number_of_employees',
         'total_busy_rooms',
-        'active'
+        'active',
+        'reserved'
         
     ];
 }

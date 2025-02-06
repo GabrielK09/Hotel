@@ -38,7 +38,7 @@ Route::prefix('v1')->group( function (){
     });
 
     Route::prefix('pay-ment')->group(function (){
-        Route::get('/index', [PayMentController::class, 'index']);
+        Route::post('/index', [PayMentController::class, 'payMent']);
 
     });
 });
