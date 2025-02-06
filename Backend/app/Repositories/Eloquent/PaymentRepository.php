@@ -2,31 +2,30 @@
 
 namespace App\Repositories\Eloquent;
 
-use App\Models\Nfce;
-use App\Repositories\Contracts\Base;
+use App\Models\Payment;
 
-class NfceRepository extends BaseRepository implements Base
+class PaymentRepository
 {
     public function getAll(int $active){
-        return Nfce::where('active', $active)->get();
+        return Payment::where('active', $active)->get();
     }
 
     public function findByID(string $params){
-        return Nfce::where('id', $params)
+        return Payment::where('id', $params)
                     ->orWhere('products', 'like', '%'. $params . '%')
                     ->get();
     }
 
     public function store(array $data){
-        return Nfce::create($data);
+        return Payment::create($data);
     }
 
     public function update(array $data, int $id){
-        return Nfce::where('id', $id)->update($data, $id);
+        return Payment::where('id', $id)->update($data, $id);
     }
 
     public function delete(int $id){
-        return Nfce::where('id', $id)->update([
+        return Payment::where('id', $id)->update([
             'active' => 0,
         ]);
     }

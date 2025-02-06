@@ -3,8 +3,9 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\Products;
+use App\Repositories\Contracts\Base;
 
-class ProductsRepository
+class ProductsRepository extends BaseRepository implements Base
 {
     public function getAll(int $active){
         return Products::where('active', $active)->get();
@@ -16,12 +17,12 @@ class ProductsRepository
                            $query->where('name', 'like', '%' . $params . '%')
                                  ->orWhere('id', $id);
                        })
-                       ->limit(10)
+                       ->paginate(10)
                        ->get();
     }
 
-    public function findByID(int $id){
-        return Products::where('id', $id)->first();
+    public function findByID(string $params){
+        return Products::where('id', $params)->first();
     }
 
     public function store(array $data){

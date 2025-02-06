@@ -4,15 +4,16 @@ namespace App\Repositories\Eloquent;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use App\Repositories\Contracts\Base;
 
-class UserRepository
+class UserRepository extends BaseRepository implements Base
 {
     public function getAll(int $active){
         return User::where('active', $active)->get();
     }
 
-    public function findByID(int $id){
-        return User::where('id', $id)->first();
+    public function findByID(string $params){
+        return User::where('id', $params)->first();
     }
 
     public function store(array $data){

@@ -2,38 +2,29 @@
 
 namespace App\Services;
 
-use App\Repositories\Eloquent\ProductsRepository;
+use App\Repositories\Eloquent\PaymentRepository;
 
-class ProductsService{
+class PaymentService{
     
-    protected $productsRepository;
+    protected $paymentRepository;
 
-    public function __construct(ProductsRepository $productsRepository)
-    {
-        $this->productsRepository = $productsRepository;
+    public function __construct(PaymentRepository $paymentRepository){
+        $this->paymentRepository = $paymentRepository;
     }
-    
+
     public function getAll(){
         try {
-            return $this->productsRepository->getAll(1);
+            return $this->paymentRepository->getAll(1);
         } catch (\Throwable $th) {
             return $this->returnResponse($th);
         }
     }
 
-    public function search(array $data){
-        try {
-            return $this->productsRepository->search($data);
-        } catch (\Throwable $th) {
-            return $this->returnResponse($th);
-        }
-    }
-
-    public function findByID(int $id){
+    public function findById(int $id){
         try {
             return response()->json([
                 'success' => true,
-                'product' => $this->productsRepository->findByID($id)
+                'especie' => $this->paymentRepository->findById($id)
             ]);
 
         } catch (\Throwable $th) {
@@ -43,7 +34,7 @@ class ProductsService{
 
     public function store(array $data){
         try {
-            $this->productsRepository->store($data);
+            $this->paymentRepository->store($data);
             return response()->json(true);
 
         } catch (\Throwable $th) {
@@ -53,7 +44,7 @@ class ProductsService{
 
     public function update(array $data, int $id){
         try {
-            $this->productsRepository->update($data, $id);
+            $this->paymentRepository->update($data, $id);
             return response()->json(true);
 
         } catch (\Throwable $th) {
@@ -63,9 +54,9 @@ class ProductsService{
 
     public function delete(int $id){
         try {
-            $this->productsRepository->delete($id);
+            $this->paymentRepository->delete($id);
             return response()->json(true);
-            
+
         } catch (\Throwable $th) {
             return $this->returnResponse($th);
         }
@@ -75,7 +66,7 @@ class ProductsService{
         return response()->json([
             'success' => false,
             'th' => $th->getMessage(),
-            'line' => $th->getLine(),
+            'line' => $th->getLise(),
             'file' => $th->getFile(),
         ]);
     }

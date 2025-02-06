@@ -21,7 +21,7 @@ Route::get('/', function () {
 Route::prefix('products')->group( function(){
 
     Route::get('/all', [ProductsController::class, 'getAll']);
-    Route::get('/search', [ProductsController::class, 'search']);
+    Route::post('/search', [ProductsController::class, 'search']);
     Route::post('/create', [ProductsController::class, 'store']);
     Route::get('/{id}', [ProductsController::class, 'findByID']);
     Route::put('/{id}', [ProductsController::class, 'update']);

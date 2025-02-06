@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductsRequest;
 use App\Services\ProductsService;
+use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
@@ -18,8 +19,9 @@ class ProductsController extends Controller
         return $this->productsService->getAll();
     }
 
-    public function search(int $active, string $params, int $id){
-        return $this->productsService->search($active, $params, $id);
+    public function search(Request $request){
+        return response()->json($request->all());
+        //return $this->productsService->search($id);
     }
 
     public function store(ProductsRequest $request){
