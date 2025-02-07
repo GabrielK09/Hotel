@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
     <div class="bg-indigo-500">
         <div class="p-4 flex text-white h-32">
@@ -56,3 +57,14 @@ import axios from 'axios';
 
     }
 </script>
+=======
+<script setup>
+import TheWelcome from '../components/TheWelcome.vue'
+</script>
+
+<template>
+  <main>
+    <TheWelcome />
+  </main>
+</template>
+>>>>>>> f660198faa681217d34af8b6331dc6571e15791f
