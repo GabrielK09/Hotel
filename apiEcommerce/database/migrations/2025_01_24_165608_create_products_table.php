@@ -18,10 +18,10 @@ return new class extends Migration
             $table->decimal('preco_custo', 16,2);
             $table->decimal('preco_venda', 16,2);
             $table->decimal('perc_lucro', 16,2);
-            $table->integer('NCM');
-            $table->integer('CEST');
-            $table->integer('CSOSN');
-            $table->integer('CFOP');
+            $table->integer('NCM', 8);
+            $table->integer('CEST', 7);
+            $table->integer('CSOSN', 3);
+            $table->integer('CFOP', 4);
             $table->boolean('active')->default(1);
             $table->timestamps();
         });

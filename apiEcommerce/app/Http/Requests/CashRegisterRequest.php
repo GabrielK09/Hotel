@@ -30,7 +30,6 @@ class CashRegisterRequest extends FormRequest
             'valor_entrada' => "nullable|numeric|min:0|required_without:valor_saida",
             'valor_saida' => "nullable|numeric|min:0|required_without:valor_entrada",
             'saldo_real' => "nullable|numeric|min:0",
-            'active' => "$required|boolean",
         ];
     }
 

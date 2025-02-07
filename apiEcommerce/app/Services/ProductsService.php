@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Repositories\Eloquent\ProductsRepository;
+use Illuminate\Support\Facades\Log;
 
 class ProductsService{
     
@@ -43,8 +44,8 @@ class ProductsService{
 
     public function store(array $data){
         try {
-            $this->productsRepository->store($data);
-            return response()->json(true);
+            Log::info("Vai chamar checkGTIN");
+            $this->checkGTIN($data);
 
         } catch (\Throwable $th) {
             return $this->returnResponse($th);
@@ -66,6 +67,43 @@ class ProductsService{
             $this->productsRepository->delete($id);
             return response()->json(true);
             
+        } catch (\Throwable $th) {
+            return $this->returnResponse($th);
+        }
+    }
+
+    public function checkGTIN(array $gtin){
+        try {
+            Log::info("Caiu no checkGTIN");
+
+            $url = 'https://api.cosmos.bluesoft.com.br/gtins/' . $gtin['gtin'] . '.json';
+            $agent = 'Cosmos-API-Request';
+            $headers = array(
+            "Content-Type: application/json",
+            "X-Cosmos-Token:".env('BLUESOFT_TOKEN')
+            );
+
+            $curl = curl_init($url);
+            curl_setopt($curl, CURLOPT_USERAGENT, $agent);
+            curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($curl, CURLOPT_FAILONERROR, true);
+
+            $data = curl_exec($curl);
+            if ($data === false || $data == NULL) {
+                var_dump(curl_error($curl));
+            } else {
+                $object = json_decode($data);
+
+                var_dump($object);
+            }
+
+            curl_close($curl);
+
+            $this->productsRepository->store($gtin);
+            return response()->json(true);
+
         } catch (\Throwable $th) {
             return $this->returnResponse($th);
         }

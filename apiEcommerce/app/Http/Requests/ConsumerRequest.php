@@ -28,7 +28,6 @@ class ConsumerRequest extends FormRequest
             'CPF' => "nullable|cpf|unique:consumers,cpf|required_without:CNPJ",
             'CNPJ' => "nullable|cnpj|unique:consumers,cnpj|required_without:CPF",
             'email' => "$required|email|max:255|unique:consumers,email",
-            'active' => "$required|boolean",
         ];
     }
 

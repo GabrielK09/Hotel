@@ -5,20 +5,19 @@ namespace App\Repositories\Eloquent;
 use App\Models\Products;
 use App\Repositories\Contracts\Base;
 
-class ProductsRepository extends BaseRepository implements Base
+class ProductsRepository
 {
     public function getAll(int $active){
         return Products::where('active', $active)->get();
     }
 
-    public function search(int $active, string $params, int $id){
-        return Products::where('active', $active)
-                       ->where(function ($query) use ($params, $id) {
-                           $query->where('name', 'like', '%' . $params . '%')
-                                 ->orWhere('id', $id);
+    public function search(array $data){
+        return Products::where('active', 1)
+                       ->where(function ($query) use ($data) {
+                           $query->where('name', 'like', '%' . $data['name'] . '%')
+                                 ->orWhere('id', $data['id']);
                        })
-                       ->paginate(10)
-                       ->get();
+                       ->paginate(10);
     }
 
     public function findByID(string $params){

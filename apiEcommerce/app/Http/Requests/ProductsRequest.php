@@ -32,7 +32,6 @@ class ProductsRequest extends FormRequest
             'CEST' => 'nullable|string|max:20',
             'CSOSN' => 'nullable|string|max:3',
             'CFOP' => 'nullable|string|max:4',
-            'active' => "$required|boolean",
         ];
     }
 
