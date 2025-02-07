@@ -34,7 +34,7 @@ class PayMentController extends Controller
             $request_options->setCustomHeaders(["X-Idempotency-Key: <SOME_UNIQUE_VALUE>"]);
 
             $payment = $client->create($request, $request_options);
-            echo $payment->id;
+            return response()->json($payment->id);
 
         } catch (MPApiException $e) {
             return response()->json([
@@ -51,8 +51,6 @@ class PayMentController extends Controller
     public function payMent(Request $request)
     {
         $amount = (float) trim($request->all());
-
-        $payment = new Payment(1);
 
     }
 }
