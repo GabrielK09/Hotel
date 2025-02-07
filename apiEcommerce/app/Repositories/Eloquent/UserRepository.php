@@ -4,15 +4,24 @@ namespace App\Repositories\Eloquent;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-<<<<<<<< HEAD:apiEcommerce/app/Repositories/Eloquent/UserRepository.php
-use App\Repositories\Contracts\Base;
-========
->>>>>>>> f660198faa681217d34af8b6331dc6571e15791f:api/app/Repositories/Eloquent/UserRepository.php
 
-class UserRepository extends BaseRepository implements Base
+class UserRepository extends BaseRepository
 {
+    
+    protected $userModel;
+    protected $baseRepository;
+    public function __construct(User $userModel, BaseRepository $baseRepository)
+    {
+        $this->userModel = $userModel;
+        $this->baseRepository = $baseRepository;
+
+    }
     public function getAll(int $active){
-        return User::where('active', $active)->get();
+
+        
+        //return User::where('active', $active)->get();
+        return $this->baseRepository->getAll($active);
+
     }
 
     public function findByID(string $params){

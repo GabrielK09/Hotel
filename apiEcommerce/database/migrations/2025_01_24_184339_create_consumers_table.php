@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('consumers', function (Blueprint $table) {
             $table->id();
-            $table->string('cliente', 255)->unique();
-            $table->integer('CPF')->nullable();
-            $table->integer('CNPJ')->nullable();
+            $table->string('name', 120);
+            $table->string('cnpj', 14)->nullable()->unique();
+            $table->string('cpf', 11)->nullable()->unique();
             $table->string('email', 255)->unique();
             $table->string('phone', 15)->unique();
             $table->boolean('active')->default(1);

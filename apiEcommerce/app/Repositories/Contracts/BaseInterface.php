@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Contracts;
 
-interface Base
+interface BaseInterface
 {
     public function getAll();
     public function findByID(int $id);

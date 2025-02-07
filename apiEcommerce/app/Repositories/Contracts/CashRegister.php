@@ -2,7 +2,7 @@
 
 namespace App\Repositories\Contracts;
 
-interface CashRegister
+interface CashRegister extends BaseInterface
 {
     public function getAll();
     public function findByID(int $id);
