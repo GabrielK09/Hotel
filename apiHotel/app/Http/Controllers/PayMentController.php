@@ -14,7 +14,7 @@ class PayMentController extends Controller
     public function payMentMercadoPago(PayMentMethodRequest $request)
     {
         try {
-            MercadoPagoConfig::setAccessToken(env('MERCADO_PAGO_ACCESS_TOKEN'));
+            //MercadoPagoConfig::setAccessToken(env('MERCADO_PAGO_ACCESS_TOKEN'));
             MercadoPagoConfig::setRuntimeEnviroment(MercadoPagoConfig::LOCAL);
 
             $client = new PaymentClient();

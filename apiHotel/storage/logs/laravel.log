@@ -138,3 +138,6 @@
 #46 C:\\Gabriel\\Codes\\Hotel\\apiHotel\\artisan(13): Illuminate\\Foundation\\Application->handleCommand()
 #47 {main}
 "} 
+[2025-02-07 16:22:13] local.INFO: Vai iniciar a consulta do CEP  
+[2025-02-07 16:22:13] local.INFO: Terminou e encerrou a consulta, vai comparar o endereço do CEP  
+[2025-02-07 16:22:13] local.INFO: Vai fazer a alteração  
