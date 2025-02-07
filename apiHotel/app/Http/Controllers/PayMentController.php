@@ -48,9 +48,10 @@ class PayMentController extends Controller
         }
     }
 
-    public function payMent(Request $request)
+    public function payMent(PayMentMethodRequest $request)
     {
-        $amount = (float) trim($request->all());
+        $data = $request->validated();
+        $amount = (float) $data;
 
     }
 }
