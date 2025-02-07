@@ -13,8 +13,11 @@ return new class extends Migration
     {
         Schema::create('cash_registers', function (Blueprint $table) {
             $table->id();
+            $table->string('description');
+            $table->decimal('valor_entrada', 16,2);
+            $table->decimal('valor_saida', 16,2);
+            $table->decimal('saldo_real', 16,2);
             $table->boolean('active')->default(1);
-            $table->sting('description');
             $table->timestamps();
         });
     }

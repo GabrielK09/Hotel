@@ -3,23 +3,20 @@
 namespace App\Repositories\Eloquent;
 
 use App\Models\Consumer;
+use App\Repositories\Contracts\Base;
 
-class ConsumerRepository
+class ConsumerRepository extends BaseRepository implements Base
 {
     public function getAll(int $active){ 
         return Consumer::where('active', $active)->get();
     }
 
-    public function findByID(int $id){
-        return Consumer::where('id', $id)->first();
+    public function findByID(string $params){
+        return Consumer::where('id', $params)->first();
     }
 
     public function store(array $data){
         return Consumer::create($data);
-    }
-
-    public function show(int $id){
-        return Consumer::where('id', $id)->first();
     }
 
     public function update(array $data, int $id){

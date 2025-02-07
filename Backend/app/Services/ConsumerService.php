@@ -21,7 +21,7 @@ class ConsumerService{
         }
     }
 
-    public function findById(int $id){
+    public function findByID(int $id){
         try {
             return response()->json([
                 'success' => true,

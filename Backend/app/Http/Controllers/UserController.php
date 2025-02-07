@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
 use App\Services\UserService;
 
-class User extends Controller
+class UserController extends Controller
 {
     protected $userService;
 
@@ -23,7 +23,7 @@ class User extends Controller
         return $this->userService->store($data);
     }
 
-    public function show(int $id){
+    public function findByID(int $id){
         return $this->userService->findByID($id);
     }
 

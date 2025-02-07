@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ConsumerRequest;
 use App\Services\ConsumerService;
 
-class Consumers extends Controller
+class ConsumerController extends Controller
 {
     protected $consumerService;
 
@@ -23,7 +23,7 @@ class Consumers extends Controller
         return $this->consumerService->store($data);
     }
 
-    public function show(int $id){
+    public function findByID(int $id){
         return $this->consumerService->findByID($id);
     }
 

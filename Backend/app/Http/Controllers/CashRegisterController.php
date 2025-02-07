@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CashRegisterRequest;
 use App\Services\CashRegisterService;
 
-class CashRegister extends Controller
+class CashRegisterController extends Controller
 {
     protected $cashRegisterService;
 
@@ -23,7 +23,7 @@ class CashRegister extends Controller
         return $this->cashRegisterService->store($data);
     }
 
-    public function show(int $id){
+    public function findByID(int $id){
         return $this->cashRegisterService->findByID($id);
     }
 
